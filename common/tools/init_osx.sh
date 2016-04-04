@@ -35,6 +35,8 @@ source devenv/bin/activate
 # update pip just in case
 pip install --upgrade pip
 pip install --upgrade setuptools==2.2
+$VIRTUAL_ENV/bin/easy_install "pyramid==1.4.5"
+pip install gunicorn==19.3.0
 
 echo "if [ -f ~/.bashrc ]; then
 	. ~/.bashrc
