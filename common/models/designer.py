@@ -7,8 +7,6 @@ class Designer(Object):
 	name = String(nullable=False, validator=lambda x: x and len(x) >0)
 
 
-
-
 class DesignerConfig(object):
 
 	def __init__(self, database):
