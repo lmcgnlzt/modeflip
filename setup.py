@@ -12,9 +12,9 @@ requires = [
     'waitress',
     ]
 
-setup(name='api_internal',
+setup(name='modeflip',
       version='0.0',
-      description='api_internal',
+      description='modeflip',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
         "Programming Language :: Python",
@@ -31,9 +31,9 @@ setup(name='api_internal',
       zip_safe=False,
       install_requires=requires,
       tests_require=requires,
-      test_suite="api_internal",
+      test_suite="modeflip",
       entry_points="""\
       [paste.app_factory]
-      main = api_internal:main
+      main = modeflip:main
       """,
       )
