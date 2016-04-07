@@ -1,5 +1,5 @@
-from valid_model import Object, ValidationError
-from valid_model.descriptors import String, Bool
+from modeflip.valid_model import Object, ValidationError
+from modeflip.valid_model.descriptors import String, Bool
 
 
 class Designer(Object):
