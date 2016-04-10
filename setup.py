@@ -10,6 +10,8 @@ requires = [
     'pyramid==1.4.5',
     'pyramid_debugtoolbar==1.0.2',
     'gunicorn==19.3.0',
+    'pymongo==2.5.2',
+    'PyYAML==3.10',
     ]
 
 setup(name='modeflip',
