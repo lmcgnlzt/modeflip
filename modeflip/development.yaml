@@ -1,0 +1,12 @@
+MONGO: &LOCAL_27017 '127.0.0.1:27017'
+
+DB_ALIAS_MAP:
+  local:
+    &local_mongo
+    host: *LOCAL_27017
+
+DB_CONFIG:
+  mf_config:
+    db_host: *local_mongo
+    db_name: 'mf_config'
+    db_alias: 'local'
