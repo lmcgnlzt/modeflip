@@ -6,7 +6,7 @@ class Designer(Object):
 	did = Integer(nullable=False)
 	name = String(nullable=False, validator=lambda x: x and len(x) >0)
 	origin = String(mutator=lambda x: x.strip().upper())
-	icon = String()
+	icon_link = String()
 	is_active = Bool(default=False)
 	bio = String()
 	likes = Integer(default=0)

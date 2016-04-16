@@ -8,7 +8,8 @@ class Garment(Object):
 	did = Integer(nullable=False)
 	price = Float(nullable=False)
 	description = String()
-	pictures = List(value=String(nullable=False))
+	shop_link = String()
+	pictures = List(value=String())
 
 
 class GarmentConfig(object):
