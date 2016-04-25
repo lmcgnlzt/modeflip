@@ -6,7 +6,7 @@ import yaml
 MODE_VARIABLE = 'CONFIGURATION'
 MODE_DEFAULT = 'development'
 PATH_VARIABLE = 'CONFIG_PATH'
-PATH_DEFAULT = '/app/modeflip/modeflip'
+PATH_DEFAULT = '~/modeflip/modeflip'
 
 class HostInfo(object):
 	HOST_REGEX = re.compile(r'^(?P<name>\w+)-(?P<number>\d+)-(?P<env>\w+)-(?P<dc>\w+)$')
