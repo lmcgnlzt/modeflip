@@ -32,6 +32,9 @@ class DesignerConfig(object):
 	def get_all_designers(self):
 		return [Designer(**doc) for doc in self.collection.find({}, {'_id': 0}).sort('name', 1)]
 
+	def get_designers_by_page(self, _page=1, _perPage=10):
+		return [Designer(**doc) for doc in self.collection.find({'did': {'$gt': (_page-1)*_perPage, '$lte': _page*_perPage}}, {'_id': 0}).sort('name', 1)]
+
 	def set(self, designer):
 		designer.validate()
 		self.collection.update({'did': designer.did}, designer.__json__(), safe=True, upsert=True)
