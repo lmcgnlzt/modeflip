@@ -17,6 +17,12 @@ class DesignerAPI(object):
 	def get_all_designers(self):
 		return self.dc.get_all_designers()
 
+	# GET /designers_by_page?_page=1&_perPage=10
+	def get_designers_by_page(self):
+		_page = int(self.request.params.get('_page'))
+		_perPage = int(self.request.params.get('_perPage'))
+		return self.dc.get_designers_by_page(_page, _perPage)
+
 	# GET /designers/{did}
 	def get_by_did(self):
 		did = int(self.request.matchdict.get('did'))
@@ -85,6 +91,9 @@ def add_view(config, route_name, method, attr):
 def includeme(config):
 	config.add_route('designers', '/designers')
 	add_view(config, 'designers', 'GET', 'get_all_designers')
+
+	config.add_route('designers_by_page', '/designers_by_page')
+	add_view(config, 'designers_by_page', 'GET', 'get_designers_by_page')
 
 	config.add_route('designer_by_did', '/designers/{did:\d+}')
 	add_view(config, 'designer_by_did', 'GET', 'get_by_did')
