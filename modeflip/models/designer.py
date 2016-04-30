@@ -1,5 +1,6 @@
 from modeflip.valid_model import Object
-from modeflip.valid_model.descriptors import String, Bool, Bool, Integer, List
+from modeflip.valid_model.descriptors import String, Bool, List
+from modeflip.utils.valid_model_utils import Integer
 
 
 class Designer(Object):

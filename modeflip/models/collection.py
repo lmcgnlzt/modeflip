@@ -1,6 +1,7 @@
 from datetime import datetime
 from modeflip.valid_model import Object
-from modeflip.valid_model.descriptors import String, Integer, List, DateTime
+from modeflip.valid_model.descriptors import String, List
+from modeflip.utils.valid_model_utils import Integer, DateTime
 
 
 class Collection(Object):
