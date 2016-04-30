@@ -69,7 +69,7 @@ JSON：同上
 
 
 
-其他API:
+# 其他API:
 - (GET)返回设计师目前点赞数量：/designers/1/likes
 - (PUT)给设计师点赞（+1）：/designers/1/do_like
 - (GET)返回设计师目前的关注数量：/designers/1/subscribes
