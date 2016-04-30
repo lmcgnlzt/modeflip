@@ -12,6 +12,7 @@ requires = [
     'gunicorn==19.3.0',
     'pymongo==2.5.2',
     'PyYAML==3.10',
+    'beautifulsoup4==4.3.2',
     ]
 
 setup(name='modeflip',
