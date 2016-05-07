@@ -1,5 +1,7 @@
 # modeflip
 
+访问API，baseurl：http://101.201.39.160
+
 REST API:
 
 # 设计师操作
