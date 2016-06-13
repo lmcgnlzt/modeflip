@@ -1,5 +1,5 @@
 from modeflip.valid_model import Object
-from modeflip.valid_model.descriptors import String, List
+from modeflip.valid_model.descriptors import String, List, EmbeddedObject
 from modeflip.utils.valid_model_utils import Integer, Float
 
 
