@@ -10,7 +10,7 @@ from modeflip.models.designer import *
 
 
 
-local_config = get_configuration()
+local_config = get_configuration('production')
 get_database = MongoManager(local_config, force_load=True)
 
 
