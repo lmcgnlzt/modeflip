@@ -7,8 +7,8 @@ README = open(os.path.join(here, 'README.txt')).read()
 CHANGES = open(os.path.join(here, 'CHANGES.txt')).read()
 
 requires = [
-    'pyramid==1.4.5',
-    'pyramid_debugtoolbar',
+    'pyramid==1.6.1',
+    'pyramid_debugtoolbar==3.0.1',
     'gunicorn==19.3.0',
     'pymongo==2.5.2',
     'PyYAML==3.10',

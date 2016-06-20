@@ -1,3 +1,5 @@
+#coding=utf-8
+
 # from pprint import pprint
 import datetime
 
@@ -225,7 +227,9 @@ private_musics = [
 	]
 
 
-bio1 = "Juan was born April 9, 1963 in New York City. Marc's life was completely altered following the death of his father at the age of 7. He would eventually move in with his grandmother and that made all the difference. Marc entered the Parsons School of Design and later a position at Perry Ellis. Jacobs started his own label and continued to impress the fashion world"
+# bio1 = "Juan was born April 9, 1963 in New York City. Marc's life was completely altered following the death of his father at the age of 7. He would eventually move in with his grandmother and that made all the difference. Marc entered the Parsons School of Design and later a position at Perry Ellis. Jacobs started his own label and continued to impress the fashion world"
+bio1 = "我是一个超级无敌设计师，哈哈哈哈哈？。。。。"
+
 d1 = Designer(
 		# did=1,
 		# name='Sophia',
