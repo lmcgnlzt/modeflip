@@ -35,6 +35,14 @@ class DesignerAPI(object):
 			raise exception_response(400, body='Designer does not exist')
 		return designer
 
+	# GET /designers/next/{curr_did}
+	def get_next_designer(self):
+		curr_did = int(self.request.matchdict['curr_did'])
+		designer, has_next = self.dc.get_next_designer(curr_did)
+		if not designer:
+			raise exception_response(400, body='Designer does not exist')
+		return {'did': designer.did, 'designer': designer, 'has_next': has_next}
+
 	# POST /designers
 	def create_designer(self):
 		data = self.request.json_body
@@ -228,6 +236,9 @@ def includeme(config):
 	add_view(config, 'designer_by_did', 'GET', 'get_designer_by_id')
 	add_view(config, 'designer_by_did', 'PUT', 'update_designer_by_id')
 	add_view(config, 'designer_by_did', 'DELETE', 'delete_designer_by_id')
+
+	config.add_route('next_designer', '/designers/next/{curr_did:\d+}')
+	add_view(config, 'next_designer', 'GET', 'get_next_designer')
 
 	config.add_route('likes_of_designer', '/designers/{did:\d+}/likes')
 	add_view(config, 'likes_of_designer', 'GET', 'get_likes_by_did')

@@ -112,6 +112,15 @@ class DesignerConfig(object):
 		doc = self.collection.find_one({'did': did})
 		return Designer(**doc) if doc else None
 
+	def get_next_designer(self, curr_did):
+		res = list(self.collection.find({'did': {'$gt': curr_did}}, sort=[('did', 1)], limit=2))
+		if res:
+			d = Designer(**res[0])
+			has_next = len(res) > 1
+			return d, has_next
+		else:
+			return None, False
+
 	def get_all_ids(self):
 		return [c['did'] for c in self.collection.find({}, {'_id':0, 'did':1}).sort('did', 1)]
 

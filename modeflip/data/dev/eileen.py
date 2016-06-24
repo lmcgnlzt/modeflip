@@ -18,54 +18,54 @@ dc = DesignerConfig(get_database('mf_config'))
 
 
 profile_images = ProfileImages(
-	icon_url='file:///Users/mli/resources/eileen/icon/icon.jpg',
-	image_url='file:///Users/mli/resources/eileen/icon/image.jpg',
-	background_url='file:///Users/mli/resources/eileen/icon/background.jpg',
+	icon_url='images/resources/eileen/icon/icon.jpg',
+	image_url='images/resources/eileen/icon/image.jpg',
+	background_url='images/resources/eileen/icon/background.jpg',
 	)
 
 experience_content = ExperienceContent(
 	brands=[
-		'file:///Users/mli/resources/eileen/experience/brand/maxmara.jpg',
-		'file:///Users/mli/resources/eileen/experience/brand/cerruti.jpg',
-		'file:///Users/mli/resources/eileen/experience/brand/dkny.jpg',
-		'file:///Users/mli/resources/eileen/experience/brand/gianni.jpg',
+		'images/resources/eileen/experience/brand/maxmara.jpg',
+		'images/resources/eileen/experience/brand/cerruti.jpg',
+		'images/resources/eileen/experience/brand/dkny.jpg',
+		'images/resources/eileen/experience/brand/gianni.jpg',
 		],
 	pic_title='',
 	pages = [
 		PicturePage(
 			pics = [
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/1s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/1.jpg'),
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/2s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/2.jpg'),
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/3s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/3.jpg'),
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/4s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/4.jpg'),
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/5s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/5.jpg'),
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/6s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/6.jpg'),
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/7s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/7.jpg'),
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/8s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/8.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/1s.jpg', image='images/resources/eileen/experience/pics/1.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/2s.jpg', image='images/resources/eileen/experience/pics/2.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/3s.jpg', image='images/resources/eileen/experience/pics/3.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/4s.jpg', image='images/resources/eileen/experience/pics/4.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/5s.jpg', image='images/resources/eileen/experience/pics/5.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/6s.jpg', image='images/resources/eileen/experience/pics/6.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/7s.jpg', image='images/resources/eileen/experience/pics/7.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/8s.jpg', image='images/resources/eileen/experience/pics/8.jpg'),
 			]
 		),
 		PicturePage(
 			pics = [
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/11s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/11.jpg'),
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/12s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/12.jpg'),
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/13s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/13.jpg'),
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/14s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/14.jpg'),
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/5s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/5.jpg'),
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/6s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/6.jpg'),
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/7s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/7.jpg'),
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/8s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/8.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/11s.jpg', image='images/resources/eileen/experience/pics/11.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/12s.jpg', image='images/resources/eileen/experience/pics/12.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/13s.jpg', image='images/resources/eileen/experience/pics/13.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/14s.jpg', image='images/resources/eileen/experience/pics/14.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/5s.jpg', image='images/resources/eileen/experience/pics/5.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/6s.jpg', image='images/resources/eileen/experience/pics/6.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/7s.jpg', image='images/resources/eileen/experience/pics/7.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/8s.jpg', image='images/resources/eileen/experience/pics/8.jpg'),
 			]
 		),
 		PicturePage(
 			pics = [
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/1s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/1.jpg'),
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/2s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/2.jpg'),
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/12s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/12.jpg'),
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/13s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/13.jpg'),
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/14s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/14.jpg'),
-				Picture(thumbnail='file:///Users/mli/resources/eileen/experience/pics/5s.jpg', image='file:///Users/mli/resources/eileen/experience/pics/5.jpg'),
-				# Picture(thumbnail='file:///Users/mli/resources/eileen/images/pics/7s.jpg', image='file:///Users/mli/resources/eileen/images/pics/7.jpg'),
-				# Picture(thumbnail='file:///Users/mli/resources/eileen/images/pics/8s.jpg', image='file:///Users/mli/resources/eileen/images/pics/8.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/1s.jpg', image='images/resources/eileen/experience/pics/1.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/2s.jpg', image='images/resources/eileen/experience/pics/2.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/12s.jpg', image='images/resources/eileen/experience/pics/12.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/13s.jpg', image='images/resources/eileen/experience/pics/13.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/14s.jpg', image='images/resources/eileen/experience/pics/14.jpg'),
+				Picture(thumbnail='images/resources/eileen/experience/pics/5s.jpg', image='images/resources/eileen/experience/pics/5.jpg'),
+				# Picture(thumbnail='images/resources/eileen/images/pics/7s.jpg', image='images/resources/eileen/images/pics/7.jpg'),
+				# Picture(thumbnail='images/resources/eileen/images/pics/8s.jpg', image='images/resources/eileen/images/pics/8.jpg'),
 			]
 		)
 	],
@@ -77,14 +77,14 @@ experience_content = ExperienceContent(
 exclusive_content = ExclusiveContent(
 	title='Max Mara',
 	pics=[
-		'file:///Users/mli/resources/eileen/exclusive/pics/1.jpg',
-		'file:///Users/mli/resources/eileen/exclusive/pics/2.jpg',
-		'file:///Users/mli/resources/eileen/exclusive/pics/3.jpg',
+		'images/resources/eileen/exclusive/pics/1.jpg',
+		'images/resources/eileen/exclusive/pics/2.jpg',
+		'images/resources/eileen/exclusive/pics/3.jpg',
 		],
 	videos=[
 		Video(
-				thumbnail='file:///Users/mli/resources/eileen/exclusive/videos/thumbnail.jpg',
-				url='file:///Users/mli/resources/eileen/exclusive/videos/MaxMara.mp4',
+				thumbnail='images/resources/eileen/exclusive/videos/thumbnail.jpg',
+				url='images/resources/eileen/exclusive/videos/MaxMara.mp4',
 			)
 		]
 	)
@@ -95,28 +95,28 @@ garments_july = [
 		gid=1,
 		shop_link='http://shop_link',
 		pic = Picture(
-			thumbnail='file:///Users/mli/resources/eileen/collections/201607/garments/1/pre1s.jpg',
-			image='file:///Users/mli/resources/eileen/collections/201607/garments/1/pre1.jpg',
+			thumbnail='images/resources/eileen/collections/201607/garments/1/pre1s.jpg',
+			image='images/resources/eileen/collections/201607/garments/1/pre1.jpg',
 			title='蕾丝花边裙',
 			),
 		more_pics = [
-			Picture(title="细节1", image='file:///Users/mli/resources/eileen/collections/201607/garments/1/details/1.jpg'),
-			Picture(title="细节2", image='file:///Users/mli/resources/eileen/collections/201607/garments/1/details/2.jpg'),
-			Picture(title="细节3", image='file:///Users/mli/resources/eileen/collections/201607/garments/1/details/3.jpg'),
-			Picture(title="细节4", image='file:///Users/mli/resources/eileen/collections/201607/garments/1/details/4.jpg'),
+			Picture(title="细节1", image='images/resources/eileen/collections/201607/garments/1/details/1.jpg'),
+			Picture(title="细节2", image='images/resources/eileen/collections/201607/garments/1/details/2.jpg'),
+			Picture(title="细节3", image='images/resources/eileen/collections/201607/garments/1/details/3.jpg'),
+			Picture(title="细节4", image='images/resources/eileen/collections/201607/garments/1/details/4.jpg'),
 			]
 		),
 	Garment(
 		gid=2,
 		shop_link='http://shop_link',
 		pic = Picture(
-			thumbnail='file:///Users/mli/resources/eileen/collections/201607/garments/2/new1s.jpg',
-			image='file:///Users/mli/resources/eileen/collections/201607/garments/2/1s.jpg',
+			thumbnail='images/resources/eileen/collections/201607/garments/2/new1s.jpg',
+			image='images/resources/eileen/collections/201607/garments/2/1s.jpg',
 			title='无袖开衩长裙',
 			),
 		more_pics = [
-			Picture(title="细节1", image='file:///Users/mli/resources/eileen/collections/201607/garments/2/details/1.jpg'),
-			Picture(title="细节2", image='file:///Users/mli/resources/eileen/collections/201607/garments/2/details/2.jpg'),
+			Picture(title="细节1", image='images/resources/eileen/collections/201607/garments/2/details/1.jpg'),
+			Picture(title="细节2", image='images/resources/eileen/collections/201607/garments/2/details/2.jpg'),
 			]
 		),
 	]
@@ -126,28 +126,28 @@ garments_june = [
 		gid=1,
 		shop_link='http://shop_link',
 		pic = Picture(
-			thumbnail='file:///Users/mli/resources/eileen/collections/201606/garments/1/pre1s.jpg',
-			image='file:///Users/mli/resources/eileen/collections/201606/garments/1/pre1.jpg',
+			thumbnail='images/resources/eileen/collections/201606/garments/1/pre1s.jpg',
+			image='images/resources/eileen/collections/201606/garments/1/pre1.jpg',
 			title='复古开叉长裙',
 			),
 		more_pics = [
-			Picture(title="细节1", image='file:///Users/mli/resources/eileen/collections/201606/garments/1/details/1.jpg'),
-			Picture(title="细节2", image='file:///Users/mli/resources/eileen/collections/201606/garments/1/details/2.jpg'),
-			Picture(title="细节3", image='file:///Users/mli/resources/eileen/collections/201606/garments/1/details/3.jpg'),
-			Picture(title="细节4", image='file:///Users/mli/resources/eileen/collections/201606/garments/1/details/4.jpg'),
+			Picture(title="细节1", image='images/resources/eileen/collections/201606/garments/1/details/1.jpg'),
+			Picture(title="细节2", image='images/resources/eileen/collections/201606/garments/1/details/2.jpg'),
+			Picture(title="细节3", image='images/resources/eileen/collections/201606/garments/1/details/3.jpg'),
+			Picture(title="细节4", image='images/resources/eileen/collections/201606/garments/1/details/4.jpg'),
 			]
 		),
 	Garment(
 		gid=2,
 		shop_link='http://shop_link',
 		pic = Picture(
-			thumbnail='file:///Users/mli/resources/eileen/collections/201606/garments/2/new1s.jpg',
-			image='file:///Users/mli/resources/eileen/collections/201606/garments/2/1s.jpg',
+			thumbnail='images/resources/eileen/collections/201606/garments/2/new1s.jpg',
+			image='images/resources/eileen/collections/201606/garments/2/1s.jpg',
 			title='镂空两件套裙',
 			),
 		more_pics = [
-			Picture(title="细节1", image='file:///Users/mli/resources/eileen/collections/201606/garments/2/details/1.jpg'),
-			Picture(title="细节2", image='file:///Users/mli/resources/eileen/collections/201606/garments/2/details/2.jpg'),
+			Picture(title="细节1", image='images/resources/eileen/collections/201606/garments/2/details/1.jpg'),
+			Picture(title="细节2", image='images/resources/eileen/collections/201606/garments/2/details/2.jpg'),
 			]
 		),
 	]
@@ -158,13 +158,13 @@ collections = [
 		title='七月限量主题春夏系列',
 		released=datetime.datetime(2016, 7, 15),
 		signatrue_pics=[
-			'file:///Users/mli/resources/eileen/collections/201607/signature/pics/1.jpg',
-			'file:///Users/mli/resources/eileen/collections/201607/signature/pics/2.jpg',
+			'images/resources/eileen/collections/201607/signature/pics/1.jpg',
+			'images/resources/eileen/collections/201607/signature/pics/2.jpg',
 		],
 		signatrue_videos=[
 			Video(
-				thumbnail='file:///Users/mli/resources/eileen/collections/201607/signature/videos/thumbnail.jpg',
-				url='file:///Users/mli/resources/eileen/collections/201607/signature/videos/MaxMara.mp4',
+				thumbnail='images/resources/eileen/collections/201607/signature/videos/thumbnail.jpg',
+				url='images/resources/eileen/collections/201607/signature/videos/MaxMara.mp4',
 			)
 		],
 		# signatrue_musics=[
@@ -180,8 +180,8 @@ collections = [
 		title='六月限量主题春夏系列',
 		released=datetime.datetime(2016, 6, 15),
 		# signatrue_pics=[
-		# 	'file:///Users/mli/resources/eileen/images/modeflip/collections/june/signature/1.jpg',
-		# 	'file:///Users/mli/resources/eileen/images/modeflip/collections/june/signature/2.jpg',
+		# 	'images/resources/eileen/images/modeflip/collections/june/signature/1.jpg',
+		# 	'images/resources/eileen/images/modeflip/collections/june/signature/2.jpg',
 		# ],
 		# signatrue_videos=[
 		# 	'images/modeflip/MaxMara_Spring_Summer_2011_MilanHD2.mp4',
@@ -199,14 +199,14 @@ collections = [
 
 signatrue_products = [
 	SignatrueProduct(
-			picture='file:///Users/mli/resources/eileen/product/1.jpg',
+			picture='images/resources/eileen/product/1.jpg',
 			title='designer notebook',
 			subtitle='Signature Product',
 			desc='This is an awesome notebook, you will love it',
 			shop_link='http://notebook_shop_link',
 		),
 	SignatrueProduct(
-			picture='file:///Users/mli/resources/eileen/product/2.jpg',
+			picture='images/resources/eileen/product/2.jpg',
 			title='designer notebook',
 			subtitle='Signature Product',
 			desc='This is an awesome notebook, you will love it',
