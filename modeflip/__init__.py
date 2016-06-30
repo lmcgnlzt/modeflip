@@ -25,8 +25,8 @@ def main(global_config, **settings):
     config.include('modeflip.utils.pyramid_helpers')
 
 
-    # config.include('modeflip.api_internal.frontpage_api')
     config.include('modeflip.api_internal.designer_api')
+    config.include('modeflip.api_internal.mode_api')
 
 
     def add_cors_headers_response_callback(event):

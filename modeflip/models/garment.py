@@ -2,15 +2,17 @@ from modeflip.valid_model import Object
 from modeflip.valid_model.descriptors import String, List, EmbeddedObject
 from modeflip.utils.valid_model_utils import Integer, Float
 
+from modeflip.models.designer import Picture
+
 
 class Garment(Object):
 	gid = Integer(nullable=False)
 	cid = Integer(nullable=False)
 	did = Integer(nullable=False)
 	price = Float(nullable=False)
-	description = String()
 	shop_link = String()
-	pictures = List(value=String())
+	pic = EmbeddedObject(Picture)
+	details = List(value=EmbeddedObject(Picture))
 
 
 class GarmentConfig(object):

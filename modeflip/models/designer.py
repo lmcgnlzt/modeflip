@@ -1,42 +1,15 @@
 from modeflip.valid_model import Object
 from modeflip.valid_model.descriptors import String, Bool, List, EmbeddedObject
-from modeflip.utils.valid_model_utils import Integer, DateTime
+from modeflip.utils.valid_model_utils import Integer, DateTime, Float
 
-
-class ProfileImages(Object):
-	icon_url = String(validator=lambda x: '/' in x)
-	image_url = String(validator=lambda x: '/' in x)
-	background_url = String(validator=lambda x: '/' in x)
-
-
-class Picture(Object):
-	title = String()
-	thumbnail = String(validator=lambda x: '/' in x)
-	image = String(validator=lambda x: '/' in x)
-
-
-class Video(Object):
-	title = String()
-	thumbnail = String(validator=lambda x: '/' in x)
-	url = String(validator=lambda x: '/' in x)
-
-
-class Music(Object):
-	title = String()
-	thumbnail = String(validator=lambda x: '/' in x)
-	url = String(validator=lambda x: '/' in x)
-
-
-class PicturePage(Object):
-	pics = List(value=EmbeddedObject(Picture))
+from modeflip.models.common import ProfileImages, Picture, Video, Music, PicturePage
+from modeflip.models.collection import Collection
 
 
 class ExperienceContent(Object):
 	brands = List(value=String(), validator=lambda x: all('/' in i for i in x))
 	pic_title = String()
-	# pics = List(value=EmbeddedObject(Picture))
-	pages = List(value=EmbeddedObject(PicturePage))
-	# pics = List(value=List(value=EmbeddedObject(Picture)))
+	pics = List(value=EmbeddedObject(Picture))
 	video_title = String()
 	videos = List(value=String(), validator=lambda x: all('/' in i for i in x))
 
@@ -45,24 +18,6 @@ class ExclusiveContent(Object):
 	title = String()
 	pics = List(value=String(), validator=lambda x: all('/' in i for i in x))
 	videos = List(value=EmbeddedObject(Video))
-
-
-class Garment(Object):
-	gid = Integer(nullable=False)
-	shop_link = String()
-	pic = EmbeddedObject(Picture)
-	more_pics = List(value=EmbeddedObject(Picture))
-
-
-class Collection(Object):
-	cid = Integer(nullable=False)
-	title = String()
-	released = DateTime(nullable=False)
-	signatrue_pics = List(value=String(), validator=lambda x: all('/' in i for i in x))
-	signatrue_videos = List(value=EmbeddedObject(Video))
-	signatrue_musics = List(value=EmbeddedObject(Music))
-	garments = List(value=EmbeddedObject(Garment))
-	new_arrival = Bool(default=False)
 
 
 class PrivateMusic(Object):
@@ -86,15 +41,19 @@ class Designer(Object):
 	profile_images = EmbeddedObject(ProfileImages)
 	is_active = Bool(default=False)
 	origin = String(mutator=lambda x: x.strip().upper())
-	likes = Integer(default=0)
-	subscribers = Integer(default=0)
 	bio = String()
 	experience_content = EmbeddedObject(ExperienceContent)
 	exclusive_content = EmbeddedObject(ExclusiveContent)
-	collections = List(value=EmbeddedObject(Collection))
+
+
+	likes = Integer(default=0)
+	subscribers = Integer(default=0)
+
 
 	signatrue_products = List(value=EmbeddedObject(SignatrueProduct))
 	private_musics = List(value=EmbeddedObject(PrivateMusic))
+
+	collections = List(value=EmbeddedObject(Collection)) # place holder for data transformation
 
 
 class DesignerConfig(object):
@@ -102,11 +61,11 @@ class DesignerConfig(object):
 	def __init__(self, database):
 		self.database = database
 		self.collection = database['designers']
+		self.ensure_indexes()
 
 	def ensure_indexes(self):
 		self.collection.ensure_index([('did', 1)])
 		self.collection.ensure_index([('name', 1)])
-		self.ensure_indexes()
 
 	def get(self, did):
 		doc = self.collection.find_one({'did': did})
@@ -125,7 +84,7 @@ class DesignerConfig(object):
 		return [c['did'] for c in self.collection.find({}, {'_id':0, 'did':1}).sort('did', 1)]
 
 	def get_all_designers(self):
-		return [Designer(**doc) for doc in self.collection.find({}).sort('name', 1)]
+		return [Designer(**doc) for doc in self.collection.find({}).sort('did', 1)]
 
 	def get_designers_by_page(self, _page=1, _perPage=10):
 		return [Designer(**doc) for doc in self.collection.find({'did': {'$gt': (_page-1)*_perPage, '$lte': _page*_perPage}}, {'_id': 0}).sort('name', 1)]
