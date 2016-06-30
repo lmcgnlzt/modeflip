@@ -74,8 +74,8 @@ exclusive_content = ExclusiveContent(
 		],
 	videos=[
 		Video(
-				thumbnail='http://assets.modeflip.com/gianni/exclusive/videos/thumbnail.jpg',
-				poster='http://assets.modeflip.com/gianni/exclusive/videos/thumbnail.png',
+				thumbnail='http://assets.modeflip.com/gianni/exclusive/videos/thumbnail.png',
+				poster='http://assets.modeflip.com/gianni/exclusive/videos/thumbnail.jpg',
 				url='http://assets.modeflip.com/gianni/exclusive/videos/MaxMara.mp4',
 			)
 		]
@@ -152,8 +152,8 @@ c_july = Collection(
 		],
 		signatrue_videos=[
 			Video(
-				thumbnail='http://assets.modeflip.com/gianni/collections/201607/signature/videos/thumbnail.jpg',
-				poster='http://assets.modeflip.com/gianni/collections/201607/signature/videos/thumbnail.png',
+				thumbnail='http://assets.modeflip.com/gianni/collections/201607/signature/videos/thumbnail.png',
+				poster='http://assets.modeflip.com/gianni/collections/201607/signature/videos/thumbnail.jpg',
 				url='http://assets.modeflip.com/gianni/collections/201607/signature/videos/MaxMara.mp4',
 			)
 		],
