@@ -88,14 +88,14 @@ signatrue_products = [
 			title='设计师环保活页笔记本夹',
 			subtitle='标志产品',
 			desc='这是一段关于活页笔记本夹的简要介绍，字体可以调整',
-			shop_link='http://notebook_shop_link',
+			shop_link='http://detail.koudaitong.com/show/goods?alias=26u1h3ut7z8xv&v2/goods/26u1h3ut7z8xv',
 		),
 	SignatrueProduct(
 			picture='http://assets.modeflip.com/sophia/product/2.jpg',
 			title='A5 设计师独家设计卡',
 			# subtitle='Signature Product',
 			# desc='This is an awesome notebook, you will love it',
-			shop_link='http://notebook_shop_link',
+			shop_link='http://detail.koudaitong.com/show/goods?alias=26u1h3ut7z8xv&v2/goods/26u1h3ut7z8xv',
 		),
 	]
 
@@ -204,7 +204,7 @@ g_july_1 = Garment(
 				cid=CID_2,
 				did=DID,
 				price=888,
-				shop_link='http://shop_link',
+				shop_link='http://detail.koudaitong.com/show/goods?alias=26u1h3ut7z8xv&v2/goods/26u1h3ut7z8xv',
 				pic = Picture(title="蕾丝花边裙", image='http://assets.modeflip.com/sophia/collections/201607/garments/1/pre1.jpg'),
 				details=[
 					Picture(title="蕾丝花边裙", image='http://assets.modeflip.com/sophia/collections/201607/garments/1/pre1.jpg'),
@@ -221,7 +221,7 @@ g_july_2 = Garment(
 				cid=CID_2,
 				did=DID,
 				price=888,
-				shop_link='http://shop_link',
+				shop_link='http://detail.koudaitong.com/show/goods?alias=26u1h3ut7z8xv&v2/goods/26u1h3ut7z8xv',
 				pic = Picture(title="蕾丝花边裙", image='http://assets.modeflip.com/sophia/collections/201607/garments/1/pre1.jpg'),
 				details=[
 					Picture(title="无袖开衩长裙", image='http://assets.modeflip.com/sophia/collections/201607/garments/2/1s.jpg'),
@@ -237,7 +237,7 @@ g_june_1 = Garment(
 				cid=CID_1,
 				did=DID,
 				price=777,
-				shop_link='http://shop_link',
+				shop_link='http://detail.koudaitong.com/show/goods?alias=26u1h3ut7z8xv&v2/goods/26u1h3ut7z8xv',
 				pic = Picture(title="蕾丝花边裙", image='http://assets.modeflip.com/sophia/collections/201607/garments/1/pre1.jpg'),
 				details=[
 					Picture(title="蕾丝花边裙", image='http://assets.modeflip.com/sophia/collections/201607/garments/1/pre1.jpg'),
@@ -254,7 +254,7 @@ g_june_2 = Garment(
 				cid=CID_1,
 				did=DID,
 				price=777,
-				shop_link='http://shop_link',
+				shop_link='http://detail.koudaitong.com/show/goods?alias=26u1h3ut7z8xv&v2/goods/26u1h3ut7z8xv',
 				pic = Picture(title="蕾丝花边裙", image='http://assets.modeflip.com/sophia/collections/201607/garments/1/pre1.jpg'),
 				details=[
 					Picture(title="无袖开衩长裙", image='http://assets.modeflip.com/sophia/collections/201607/garments/2/1s.jpg'),
