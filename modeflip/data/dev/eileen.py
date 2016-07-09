@@ -1,5 +1,8 @@
 #coding=utf-8
 
+import os.path
+import random
+
 from datetime import datetime
 
 from modeflip.utils.config import get_configuration
@@ -25,7 +28,8 @@ gc = GarmentConfig(config_db)
 DID = 2
 
 
-bio = "Eillen, 1954年，圣.洛朗参加国际羊毛局举办的设计大奖赛，以一套黑色鸡尾酒会服荣获女装一等奖，以此为契机进入迪奥尔店的主任设计师。60年代的后半期，圣.洛朗使自己的高级时装和高级成衣遍及全世界，1971年春他推出沙漏形的40年代风格，掀起一阵回归潮, 1974年秋他发表哥萨克风格，引起民族风格服装的流行。直到现在，他仍是巴黎时装界举足轻重的一位设计师。"
+intro = "Eileen Sullivan，来自英国，Ralph Lauren全球设计副总裁22年，和Ralph先生一起建立起Ralph Lauren时尚帝国，同时被大名鼎鼎的唐纳川普（Donald John Trump）的女儿伊万卡川普 (Ivanka Trump)钦点，为其同名时尚品牌伊凡卡川普担任创意总监。目前担任着FIT时尚设计学院的客座讲师，是美国具有重要地位的设计师。"
+bio = "Eileen Sullivan 来自英国，在巴黎和伦敦长大，从时尚设计专业毕业后，Eileen便被美国最经典奢侈品Ralph Lauren钦点，随后作为Ralph先生的左膀右臂任命全球设计副总裁长达22年，和Ralph先生一起建立起Ralph Lauren时尚帝国。在22年中，Eileen重新定义了RL品牌的美国休闲服装风格，在她的设计管理下，Ralph Lauren在全球范围内开创了Polo Ralph Lauren的顶级经典的系列，包括RL蓝标、童装、运动、内衣、泳装、高尔夫等等。Eileen同时被大名鼎鼎的唐纳川普（Donald John Trump）的女儿伊凡卡川普 (Ivanka Trump)钦点，为其同名时尚品牌伊凡卡川普担任创意总监。Eileen现在住在美国东岸的玛莎葡萄园岛，带来她自有品牌，Love for Edie及SquibeeS,同时担任着FIT时尚设计学院的客座讲师，是美国具有重要地位的设计师。"
 
 
 profile_images = ProfileImages(
@@ -34,53 +38,35 @@ profile_images = ProfileImages(
 		background_url='images/resources/eileen/icon/background.jpg',
 	)
 
+pics = [Picture(thumbnail='images/resources/eileen/experience/pics/{}s.jpg'.format(i), image='images/resources/eileen/experience/pics/{}.jpg'.format(i)) for i in range(0, 74) if os.path.isfile('/Users/mli/modeapp/modeapp/static/images/resources/eileen/experience/pics/{}s.jpg'.format(i))]
+# sig_pics = random.sample(pics, 24)
+sig_pics = pics
 
 experience_content = ExperienceContent(
 	brands=[
-		'images/resources/eileen/experience/brand/maxmara.jpg',
-		'images/resources/eileen/experience/brand/cerruti.jpg',
-		'images/resources/eileen/experience/brand/dkny.jpg',
-		'images/resources/eileen/experience/brand/gianni.jpg',
+		'images/resources/eileen/experience/brand/eide.jpg',
+		'images/resources/eileen/experience/brand/rl.jpg',
+		'images/resources/eileen/experience/brand/squibees.jpg',
+		'images/resources/eileen/experience/brand/trump.jpg',
 		],
-	pic_title='',
-	pics = [
-		Picture(thumbnail='images/resources/eileen/experience/pics/1s.jpg', image='images/resources/eileen/experience/pics/1.jpg', title='1'),
-		Picture(thumbnail='images/resources/eileen/experience/pics/2s.jpg', image='images/resources/eileen/experience/pics/2.jpg', title='2'),
-		Picture(thumbnail='images/resources/eileen/experience/pics/3s.jpg', image='images/resources/eileen/experience/pics/3.jpg', title='3'),
-		Picture(thumbnail='images/resources/eileen/experience/pics/4s.jpg', image='images/resources/eileen/experience/pics/4.jpg', title='4'),
-		Picture(thumbnail='images/resources/eileen/experience/pics/5s.jpg', image='images/resources/eileen/experience/pics/5.jpg', title='5'),
-		Picture(thumbnail='images/resources/eileen/experience/pics/6s.jpg', image='images/resources/eileen/experience/pics/6.jpg'),
-		Picture(thumbnail='images/resources/eileen/experience/pics/7s.jpg', image='images/resources/eileen/experience/pics/7.jpg'),
-		Picture(thumbnail='images/resources/eileen/experience/pics/8s.jpg', image='images/resources/eileen/experience/pics/8.jpg'),
-		Picture(thumbnail='images/resources/eileen/experience/pics/9s.jpg', image='images/resources/eileen/experience/pics/9.jpg'),
-		Picture(thumbnail='images/resources/eileen/experience/pics/10s.jpg', image='images/resources/eileen/experience/pics/10.jpg'),
-		Picture(thumbnail='images/resources/eileen/experience/pics/11s.jpg', image='images/resources/eileen/experience/pics/11.jpg'),
-		Picture(thumbnail='images/resources/eileen/experience/pics/12s.jpg', image='images/resources/eileen/experience/pics/12.jpg'),
-		Picture(thumbnail='images/resources/eileen/experience/pics/13s.jpg', image='images/resources/eileen/experience/pics/13.jpg'),
-		Picture(thumbnail='images/resources/eileen/experience/pics/14s.jpg', image='images/resources/eileen/experience/pics/14.jpg'),
-	],
-
-	# video_title='Burberry 2016',
-	# videos=['images/modeflip/MaxMara_Spring_Summer_2011_MilanHD2.mp4'],
-	)
-
-
-exclusive_content = ExclusiveContent(
-	title='Max Mara',
-	pics=[
-		'images/resources/eileen/exclusive/pics/1.jpg',
-		'images/resources/eileen/exclusive/pics/2.jpg',
-		'images/resources/eileen/exclusive/pics/3.jpg',
-		],
+	sig_pics = sig_pics,
+	pics = pics,
 	videos=[
 		Video(
-				thumbnail='images/resources/eileen/exclusive/videos/thumbnail.png',
-				poster='images/resources/eileen/exclusive/videos/thumbnail.jpg',
-				url='images/resources/eileen/exclusive/videos/MaxMara.mp4',
+				thumbnail='images/resources/eileen/experience/videos/thumbnail.png',
+				poster='images/resources/eileen/experience/videos/thumbnail.jpg',
+				url='images/resources/eileen/experience/videos/MaxMara.mp4',
 			)
 		]
 	)
 
+
+exclusive_content = ExclusiveContent(
+	title='独家签约 -- Exclusive Collections',
+	pics=[
+		'images/resources/eileen/exclusive/pics/1.jpg',
+		],
+	)
 
 
 signatrue_products = [
@@ -118,10 +104,12 @@ private_musics = [
 
 d = Designer(
 		did=DID,
-		name='Eileen',
+		name='Eileen Sullivan',
 		profile_images=profile_images,
 		is_active=True,
-		origin='New York',
+		on_market=True,
+		origin='英国',
+		intro=intro,
 		bio=bio,
 		experience_content=experience_content,
 		exclusive_content=exclusive_content,
@@ -146,17 +134,17 @@ c_july = Collection(
 		did=DID,
 		title='七月限量主题春夏系列',
 		released=datetime(2016, 7, 15),
-		signatrue_pics=[
-			'images/resources/eileen/collections/201607/signature/pics/1.jpg',
-			'images/resources/eileen/collections/201607/signature/pics/2.jpg',
-		],
-		signatrue_videos=[
-			Video(
-				thumbnail='images/resources/eileen/collections/201607/signature/videos/thumbnail.png',
-				poster='images/resources/eileen/collections/201607/signature/videos/thumbnail.jpg',
-				url='images/resources/eileen/collections/201607/signature/videos/MaxMara.mp4',
-			)
-		],
+		# signatrue_pics=[
+		# 	'images/resources/eileen/collections/201607/signature/pics/1.jpg',
+		# 	'images/resources/eileen/collections/201607/signature/pics/2.jpg',
+		# ],
+		# signatrue_videos=[
+		# 	Video(
+		# 		thumbnail='images/resources/eileen/collections/201607/signature/videos/thumbnail.png',
+		# 		poster='images/resources/eileen/collections/201607/signature/videos/thumbnail.jpg',
+		# 		url='images/resources/eileen/collections/201607/signature/videos/MaxMara.mp4',
+		# 	)
+		# ],
 		# signatrue_musics=[
 		# 	'http://sig_music_1.com',
 		# 	'http://sig_music_2.com',

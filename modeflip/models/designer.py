@@ -4,20 +4,25 @@ from modeflip.utils.valid_model_utils import Integer, DateTime, Float
 
 from modeflip.models.common import ProfileImages, Picture, Video, Music, PicturePage
 from modeflip.models.collection import Collection
+from modeflip.models.statistics import Statistics
 
 
 class ExperienceContent(Object):
 	brands = List(value=String(), validator=lambda x: all('/' in i for i in x))
-	pic_title = String()
-	pics = List(value=EmbeddedObject(Picture))
-	video_title = String()
-	videos = List(value=String(), validator=lambda x: all('/' in i for i in x))
+	sig_pics = List(value=EmbeddedObject(Picture)) # seletive pictures <= 24
+	pics = List(value=EmbeddedObject(Picture)) # all pictures
+	videos = List(value=EmbeddedObject(Video))
 
 
 class ExclusiveContent(Object):
 	title = String()
 	pics = List(value=String(), validator=lambda x: all('/' in i for i in x))
 	videos = List(value=EmbeddedObject(Video))
+
+
+class PreMarketContent(Object):
+	target_date = String()
+	target_pic = String(validator=lambda x: '/' in x)
 
 
 class PrivateMusic(Object):
@@ -40,14 +45,14 @@ class Designer(Object):
 	name = String(nullable=False, validator=lambda x: x and len(x) >0)
 	profile_images = EmbeddedObject(ProfileImages)
 	is_active = Bool(default=False)
+	on_market = Bool(default=True)
 	origin = String(mutator=lambda x: x.strip().upper())
+	intro = String()
 	bio = String()
 	experience_content = EmbeddedObject(ExperienceContent)
 	exclusive_content = EmbeddedObject(ExclusiveContent)
-
-
-	likes = Integer(default=0)
-	subscribers = Integer(default=0)
+	pre_mkt_content = EmbeddedObject(PreMarketContent)
+	likes_and_wishes = EmbeddedObject(Statistics)
 
 
 	signatrue_products = List(value=EmbeddedObject(SignatrueProduct))
@@ -93,26 +98,6 @@ class DesignerConfig(object):
 		designer.validate()
 		self.collection.update({'did': designer.did}, designer.__json__(), safe=True, upsert=True)
 		return designer
-
-	def get_likes(self, did):
-		result = self.collection.find_one({'did': did}, {'likes': 1})
-		return result['likes'] if result else None
-
-	def do_like(self, did):
-		curr_likes = self.get_likes(did)
-		if curr_likes is not None:
-			self.collection.update({'did': did}, {'$inc': {'likes': 1}})
-			return curr_likes + 1
-
-	def get_subscribes(self, did):
-		result = self.collection.find_one({'did': did}, {'subscribers': 1})
-		return result['subscribers'] if result else None
-
-	def do_subscribe(self, did):
-		curr_subscribes = self.get_subscribes(did)
-		if curr_subscribes is not None:
-			self.collection.update({'did': did}, {'$inc': {'subscribers': 1}})
-			return curr_subscribes + 1
 
 	def delete(self, did):
 		designer = self.get(did)

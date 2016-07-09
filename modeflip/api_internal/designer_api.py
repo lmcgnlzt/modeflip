@@ -80,26 +80,6 @@ class DesignerAPI(object):
 		else:
 			raise exception_response(400, body='Designer does not exist')
 
-	# GET /designers/{did:\d+}/likes
-	def get_likes_by_did(self):
-		did = int(self.request.matchdict['did'])
-		return self.dc.get_likes(did)
-
-	# PUT /designers/{did:\d+}/do_like
-	def like_designer(self):
-		did = int(self.request.matchdict['did'])
-		return self.dc.do_like(did)
-
-	# GET /designers/{did:\d+}/subscribes
-	def get_subscribes_by_did(self):
-		did = int(self.request.matchdict['did'])
-		return self.dc.get_subscribes(did)
-
-	# PUT /designers/{did:\d+}/do_subscribe
-	def subscribe_designer(self):
-		did = int(self.request.matchdict['did'])
-		return self.dc.do_subscribe(did)
-
 	# GET /designers/{did:\d+}/collections
 	def get_collections_by_designer(self):
 		did = int(self.request.matchdict['did'])
@@ -240,17 +220,6 @@ def includeme(config):
 	config.add_route('next_designer', '/designers/next/{curr_did:\d+}')
 	add_view(config, 'next_designer', 'GET', 'get_next_designer')
 
-	config.add_route('likes_of_designer', '/designers/{did:\d+}/likes')
-	add_view(config, 'likes_of_designer', 'GET', 'get_likes_by_did')
-
-	config.add_route('like_designer', '/designers/{did:\d+}/do_like')
-	add_view(config, 'like_designer', 'PUT', 'like_designer')
-
-	config.add_route('subscribes_of_designer', '/designers/{did:\d+}/subscribes')
-	add_view(config, 'subscribes_of_designer', 'GET', 'get_subscribes_by_did')
-
-	config.add_route('subscribe_designer', '/designers/{did:\d+}/do_subscribe')
-	add_view(config, 'subscribe_designer', 'PUT', 'subscribe_designer')
 
 
 	config.add_route('collections_by_designer', '/designers/{did:\d+}/collections')
@@ -261,6 +230,7 @@ def includeme(config):
 	add_view(config, 'collection_by_id', 'GET', 'get_collection_by_id')
 	add_view(config, 'collection_by_id', 'PUT', 'update_collection_by_id')
 	add_view(config, 'collection_by_id', 'DELETE', 'delete_collection_by_id')
+
 
 
 	config.add_route('garments_by_designer_collection', '/designers/{did:\d+}/collections/{cid:\d+}/garments')

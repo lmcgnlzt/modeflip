@@ -1,5 +1,8 @@
 #coding=utf-8
 
+import os.path
+import random
+
 from datetime import datetime
 
 from modeflip.utils.config import get_configuration
@@ -25,7 +28,8 @@ gc = GarmentConfig(config_db)
 DID = 3
 
 
-bio = "Gianni, 1954年，圣.洛朗参加国际羊毛局举办的设计大奖赛，以一套黑色鸡尾酒会服荣获女装一等奖，以此为契机进入迪奥尔店的主任设计师。60年代的后半期，圣.洛朗使自己的高级时装和高级成衣遍及全世界，1971年春他推出沙漏形的40年代风格，掀起一阵回归潮, 1974年秋他发表哥萨克风格，引起民族风格服装的流行。直到现在，他仍是巴黎时装界举足轻重的一位设计师。"
+intro = "Gianni Guaglianone ，来自意大利，Maxmara 全球设计总监，原Cerruti 1881（卓诺迪/切瑞蒂）首席设计总监，Donna Karan高级设计师。意大利Vogue的主编Carla Sozzani邀请Gianni参加在业内地位举足轻重的时尚大赛“谁是下一个罗马时尚大师”，Gianni在万众瞩目中赢得了比赛，获得MaxMara青睐，成为品牌的灵魂人物，意大利时尚界举足轻重的一位设计师。"
+bio = "Gianni Guaglianone ，来自意大利，Maxmara 全球设计总监。Gianni出生在意大利一个做时尚和生产的家庭，从小就对用图案自我表达的概念十分着迷，天赋异禀的他在享誉盛名的伦敦皇家艺术学院学习时尚设计专业，并习得了如何将才华通过现实技巧真正实现在一件服装设计作品中。在Gianni的毕业设计大秀上，作为评委前来的Cerruti 1881（卓诺迪/切瑞蒂）创始人尼诺切瑞蒂一眼相中Gianni并将他收入麾下，Gianni就这样加入了一个男装品牌，并成功地在任职两年内将销售提高了40%，为这个意大利经典男装品牌增添了新鲜的色彩。在Cerruti在米兰的的一场大秀中，来自纽约的著名时装设计师Donna Karan在第一排看秀，并被Gianni为品牌带来的改变而惊喜万分，在秀结束时便邀请Gianni加入她的设计团队，当时Donna Karan刚刚被Louis Vuitton集团收购正在准备重磅推出全新的男装系列，而Gianni的加入让新系列如虎添翼。2006年，出于一直以来对女装设计的热爱，Gianni开始构思自己的女装品牌，当时意大利Vogue的主编Carla Sozzani邀请Gianni参加在业内地位举足轻重的时尚大赛“谁是下一个罗马时尚大师”，Gianni在万众瞩目中赢得了比赛，并在赛后拿到了MaxMara投来的橄榄枝，正式加入MaxMara担任全球首席设计总监，开始谱写至今长达九年的传奇篇章，在第一年便将销量提升32%，同时将品牌带到了亚洲市场。"
 
 
 profile_images = ProfileImages(
@@ -34,53 +38,41 @@ profile_images = ProfileImages(
 		background_url='http://assets.modeflip.com/gianni/icon/background.jpg',
 	)
 
+ids = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '36', '37', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '62', '63', '64', '65', '66', '67', '68', '69', '70', '71', '72', '73']
+pics = [Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/{}s.jpg'.format(i), image='http://assets.modeflip.com/gianni/experience/pics/{}.jpg'.format(i)) for i in ids]
+sig_pics = random.sample(pics, 24)
 
 experience_content = ExperienceContent(
 	brands=[
-		'http://assets.modeflip.com/gianni/experience/brand/maxmara.jpg',
 		'http://assets.modeflip.com/gianni/experience/brand/cerruti.jpg',
 		'http://assets.modeflip.com/gianni/experience/brand/dkny.jpg',
+		'http://assets.modeflip.com/gianni/experience/brand/maxmara.jpg',
 		'http://assets.modeflip.com/gianni/experience/brand/gianni.jpg',
 		],
-	pic_title='',
-	pics = [
-		Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/1s.jpg', image='http://assets.modeflip.com/gianni/experience/pics/1.jpg', title='1'),
-		Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/2s.jpg', image='http://assets.modeflip.com/gianni/experience/pics/2.jpg', title='2'),
-		Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/3s.jpg', image='http://assets.modeflip.com/gianni/experience/pics/3.jpg', title='3'),
-		Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/4s.jpg', image='http://assets.modeflip.com/gianni/experience/pics/4.jpg', title='4'),
-		Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/5s.jpg', image='http://assets.modeflip.com/gianni/experience/pics/5.jpg', title='5'),
-		Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/6s.jpg', image='http://assets.modeflip.com/gianni/experience/pics/6.jpg'),
-		Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/7s.jpg', image='http://assets.modeflip.com/gianni/experience/pics/7.jpg'),
-		Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/8s.jpg', image='http://assets.modeflip.com/gianni/experience/pics/8.jpg'),
-		Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/9s.jpg', image='http://assets.modeflip.com/gianni/experience/pics/9.jpg'),
-		Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/10s.jpg', image='http://assets.modeflip.com/gianni/experience/pics/10.jpg'),
-		Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/11s.jpg', image='http://assets.modeflip.com/gianni/experience/pics/11.jpg'),
-		Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/12s.jpg', image='http://assets.modeflip.com/gianni/experience/pics/12.jpg'),
-		Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/13s.jpg', image='http://assets.modeflip.com/gianni/experience/pics/13.jpg'),
-		Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/14s.jpg', image='http://assets.modeflip.com/gianni/experience/pics/14.jpg'),
-	],
-
-	# video_title='Burberry 2016',
-	# videos=['images/modeflip/MaxMara_Spring_Summer_2011_MilanHD2.mp4'],
-	)
-
-
-exclusive_content = ExclusiveContent(
-	title='Max Mara',
-	pics=[
-		'http://assets.modeflip.com/gianni/exclusive/pics/1.jpg',
-		'http://assets.modeflip.com/gianni/exclusive/pics/2.jpg',
-		'http://assets.modeflip.com/gianni/exclusive/pics/3.jpg',
-		],
+	sig_pics = sig_pics,
+	pics = pics,
 	videos=[
 		Video(
-				thumbnail='http://assets.modeflip.com/gianni/exclusive/videos/thumbnail.png',
-				poster='http://assets.modeflip.com/gianni/exclusive/videos/thumbnail.jpg',
-				url='http://assets.modeflip.com/gianni/exclusive/videos/MaxMara.mp4',
+				thumbnail='http://assets.modeflip.com/gianni/experience/videos/thumbnail.png',
+				poster='http://assets.modeflip.com/gianni/experience/videos/thumbnail.jpg',
+				url='http://assets.modeflip.com/gianni/experience/videos/MaxMara.mp4',
 			)
 		]
 	)
 
+
+exclusive_content = ExclusiveContent(
+	title='独家签约 -- Exclusive Collections',
+	pics=[
+		'http://assets.modeflip.com/gianni/exclusive/pics/1.jpg',
+		],
+	)
+
+
+pre_mkt_content = PreMarketContent(
+		target_date='July 20, 2016 12:00:00',
+		target_pic='http://assets.modeflip.com/gianni/experience/pics/11.jpg',
+		)
 
 
 signatrue_products = [
@@ -118,13 +110,16 @@ private_musics = [
 
 d = Designer(
 		did=DID,
-		name='Gianni',
+		name='Gianni Guaglianone',
 		profile_images=profile_images,
 		is_active=True,
-		origin='Italy',
+		on_market=False,
+		origin='意大利',
+		intro=intro,
 		bio=bio,
 		experience_content=experience_content,
 		exclusive_content=exclusive_content,
+		pre_mkt_content=pre_mkt_content,
 		signatrue_products=signatrue_products,
 		private_musics=private_musics,
 		)
@@ -146,17 +141,17 @@ c_july = Collection(
 		did=DID,
 		title='七月限量主题春夏系列',
 		released=datetime(2016, 7, 15),
-		signatrue_pics=[
-			'http://assets.modeflip.com/gianni/collections/201607/signature/pics/1.jpg',
-			'http://assets.modeflip.com/gianni/collections/201607/signature/pics/2.jpg',
-		],
-		signatrue_videos=[
-			Video(
-				thumbnail='http://assets.modeflip.com/gianni/collections/201607/signature/videos/thumbnail.png',
-				poster='http://assets.modeflip.com/gianni/collections/201607/signature/videos/thumbnail.jpg',
-				url='http://assets.modeflip.com/gianni/collections/201607/signature/videos/MaxMara.mp4',
-			)
-		],
+		# signatrue_pics=[
+		# 	'http://assets.modeflip.com/gianni/collections/201607/signature/pics/1.jpg',
+		# 	'http://assets.modeflip.com/gianni/collections/201607/signature/pics/2.jpg',
+		# ],
+		# signatrue_videos=[
+		# 	Video(
+		# 		thumbnail='http://assets.modeflip.com/gianni/collections/201607/signature/videos/thumbnail.png',
+		# 		poster='http://assets.modeflip.com/gianni/collections/201607/signature/videos/thumbnail.jpg',
+		# 		url='http://assets.modeflip.com/gianni/collections/201607/signature/videos/MaxMara.mp4',
+		# 	)
+		# ],
 		# signatrue_musics=[
 		# 	'http://sig_music_1.com',
 		# 	'http://sig_music_2.com',
