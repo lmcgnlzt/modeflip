@@ -1,5 +1,8 @@
 #coding=utf-8
 
+import os.path
+import random
+
 from datetime import datetime
 
 from modeflip.utils.config import get_configuration
@@ -25,7 +28,8 @@ gc = GarmentConfig(config_db)
 DID = 1
 
 
-bio = "1954年，圣.洛朗参加国际羊毛局举办的设计大奖赛，以一套黑色鸡尾酒会服荣获女装一等奖，以此为契机进入迪奥尔店的主任设计师。60年代的后半期，圣.洛朗使自己的高级时装和高级成衣遍及全世界，1971年春他推出沙漏形的40年代风格，掀起一阵回归潮, 1974年秋他发表哥萨克风格，引起民族风格服装的流行。直到现在，他仍是巴黎时装界举足轻重的一位设计师。"
+intro = "Sophia Tezel，来自澳大利亚，Burberry全球时尚顾问，Juicy Couture，Rebecca Minkoff全球设计总监，好莱坞女星及歌手最爱的设计师之一，包括Taylor Swift,暮光之城女主角Christine Stewart、纽约第一社交名媛Olivia Palermo（gossip girl现实版）、Sex and the City女主角Sarah Jessica Parker、维密天使Miranda Kerr等。"
+bio = "Sophia Tezel，来自澳大利亚，Burberry全球时尚顾问，Juicy Couture，Rebecca Minkoff全球设计总监。Sophia Tezel从小在爸妈的服装工厂长大，耳濡目染下拥有了对时尚敏锐的嗅觉，和对工艺精巧的把握，并将这些渗透她的每一件设计作品之中。她认为时尚应该是美与实穿的结合，是有着让人惊艳的细节而让人总想再多看一眼。Sophia的身影总是出现在时尚的一线前沿，为包括Rebecca Minkoff、Nicole Miller、Juicy Couture等纽约年轻人钟爱的品牌担任设计总监，将她极高标准的国际品牌设计惊艳为品牌注入新鲜血液带来全新活力。为了达到美与实穿的完美结合，她总是倾注其才华与多年在设计开发生产的经验。她的身边永远有面料、纸板、无数的细节包围，而时至今日的她依然会为色彩、质感、工艺—所有组成一件完美服装的元素而激动和澎湃，对她而言，一件服装的诞生是一个有魔力的美好的过程。Sophia，在二十几岁时曾在悉尼创建自己的品牌，后来带着一颗要在世界时尚的中心大展拳脚的野心来到了美国纽约。她自己的品牌IS获得了无数的赞美和掌声，当时销往美国顶级奢侈品百货商场包括Barneys、Bergdorf Goodman、Saks等等。年轻的她很早便登上各大时尚杂志，包括Vogue、Elle、WWWD等。Sophia的设计总是受到好莱坞明星和歌手的青睐，包括Taylor Swift,暮光之城女主角Christine Stewart、纽约第一社交名媛Olivia Palermo（gossip girl现实版）、Sex and the City女主角Sarah Jessica Parker、维密天使Miranda Kerr等等。如今Sophia想用她对牛仔的热爱为时尚圈带来一个全新的牛仔品牌，并与2016年在纽约华丽亮相。"
 
 
 profile_images = ProfileImages(
@@ -34,51 +38,33 @@ profile_images = ProfileImages(
 		background_url='images/resources/sophia/icon/background.jpg',
 	)
 
+pics = [Picture(thumbnail='images/resources/sophia/experience/pics/{}s.jpg'.format(i), image='images/resources/sophia/experience/pics/{}.jpg'.format(i)) for i in range(0, 74) if os.path.isfile('/Users/mli/modeapp/modeapp/static/images/resources/sophia/experience/pics/{}s.jpg'.format(i))]
+sig_pics = random.sample(pics, 24)
 
 experience_content = ExperienceContent(
 	brands=[
-		'images/resources/sophia/experience/brand/maxmara.jpg',
-		'images/resources/sophia/experience/brand/cerruti.jpg',
-		'images/resources/sophia/experience/brand/dkny.jpg',
-		'images/resources/sophia/experience/brand/gianni.jpg',
+		'images/resources/sophia/experience/brand/burberry.jpg',
+		'images/resources/sophia/experience/brand/juicy.jpg',
+		'images/resources/sophia/experience/brand/r_minkoff.jpg',
+		'images/resources/sophia/experience/brand/sophia.jpg',
 		],
-	pic_title='',
-	pics = [
-		Picture(thumbnail='images/resources/sophia/experience/pics/1s.jpg', image='images/resources/sophia/experience/pics/1.jpg', title='1'),
-		Picture(thumbnail='images/resources/sophia/experience/pics/2s.jpg', image='images/resources/sophia/experience/pics/2.jpg', title='2'),
-		Picture(thumbnail='images/resources/sophia/experience/pics/3s.jpg', image='images/resources/sophia/experience/pics/3.jpg', title='3'),
-		Picture(thumbnail='images/resources/sophia/experience/pics/4s.jpg', image='images/resources/sophia/experience/pics/4.jpg', title='4'),
-		Picture(thumbnail='images/resources/sophia/experience/pics/5s.jpg', image='images/resources/sophia/experience/pics/5.jpg', title='5'),
-		Picture(thumbnail='images/resources/sophia/experience/pics/6s.jpg', image='images/resources/sophia/experience/pics/6.jpg'),
-		Picture(thumbnail='images/resources/sophia/experience/pics/7s.jpg', image='images/resources/sophia/experience/pics/7.jpg'),
-		Picture(thumbnail='images/resources/sophia/experience/pics/8s.jpg', image='images/resources/sophia/experience/pics/8.jpg'),
-		Picture(thumbnail='images/resources/sophia/experience/pics/9s.jpg', image='images/resources/sophia/experience/pics/9.jpg'),
-		Picture(thumbnail='images/resources/sophia/experience/pics/10s.jpg', image='images/resources/sophia/experience/pics/10.jpg'),
-		Picture(thumbnail='images/resources/sophia/experience/pics/11s.jpg', image='images/resources/sophia/experience/pics/11.jpg'),
-		Picture(thumbnail='images/resources/sophia/experience/pics/12s.jpg', image='images/resources/sophia/experience/pics/12.jpg'),
-		Picture(thumbnail='images/resources/sophia/experience/pics/13s.jpg', image='images/resources/sophia/experience/pics/13.jpg'),
-		Picture(thumbnail='images/resources/sophia/experience/pics/14s.jpg', image='images/resources/sophia/experience/pics/14.jpg'),
-	],
-
-	# video_title='Burberry 2016',
-	# videos=['images/modeflip/MaxMara_Spring_Summer_2011_MilanHD2.mp4'],
+	sig_pics = sig_pics,
+	pics = pics,
+	videos=[
+		Video(
+				thumbnail='images/resources/sophia/experience/videos/thumbnail.png',
+				poster='images/resources/sophia/experience/videos/thumbnail.jpg',
+				url='images/resources/sophia/experience/videos/MaxMara.mp4',
+			)
+		]
 	)
 
 
 exclusive_content = ExclusiveContent(
-	title='Max Mara',
+	title='独家签约 -- Exclusive Collections',
 	pics=[
 		'images/resources/sophia/exclusive/pics/1.jpg',
-		'images/resources/sophia/exclusive/pics/2.jpg',
-		'images/resources/sophia/exclusive/pics/3.jpg',
 		],
-	videos=[
-		Video(
-				thumbnail='images/resources/sophia/exclusive/videos/thumbnail.png',
-				poster='images/resources/sophia/exclusive/videos/thumbnail.jpg',
-				url='images/resources/sophia/exclusive/videos/MaxMara.mp4',
-			)
-		]
 	)
 
 
@@ -120,7 +106,9 @@ d = Designer(
 		name='Sophia Tezel',
 		profile_images=profile_images,
 		is_active=True,
-		origin='New York',
+		on_market=True,
+		origin='纽约',
+		intro=intro,
 		bio=bio,
 		experience_content=experience_content,
 		exclusive_content=exclusive_content,
@@ -145,17 +133,17 @@ c_july = Collection(
 		did=DID,
 		title='七月限量主题春夏系列',
 		released=datetime(2016, 7, 15),
-		signatrue_pics=[
-			'images/resources/sophia/collections/201607/signature/pics/1.jpg',
-			'images/resources/sophia/collections/201607/signature/pics/2.jpg',
-		],
-		signatrue_videos=[
-			Video(
-				thumbnail='images/resources/sophia/collections/201607/signature/videos/thumbnail.png',
-				poster='images/resources/sophia/collections/201607/signature/videos/thumbnail.jpg',
-				url='images/resources/sophia/collections/201607/signature/videos/MaxMara.mp4',
-			)
-		],
+		# signatrue_pics=[
+		# 	'images/resources/sophia/collections/201607/signature/pics/1.jpg',
+		# 	'images/resources/sophia/collections/201607/signature/pics/2.jpg',
+		# ],
+		# signatrue_videos=[
+		# 	Video(
+		# 		thumbnail='images/resources/sophia/collections/201607/signature/videos/thumbnail.png',
+		# 		poster='images/resources/sophia/collections/201607/signature/videos/thumbnail.jpg',
+		# 		url='images/resources/sophia/collections/201607/signature/videos/MaxMara.mp4',
+		# 	)
+		# ],
 		# signatrue_musics=[
 		# 	'http://sig_music_1.com',
 		# 	'http://sig_music_2.com',

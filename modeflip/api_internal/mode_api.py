@@ -2,6 +2,7 @@ from pyramid.httpexceptions import exception_response
 from modeflip.models.designer import Designer, DesignerConfig
 from modeflip.models.collection import Collection, CollectionConfig
 from modeflip.models.garment import Garment, GarmentConfig
+from modeflip.models.statistics import Statistics, StatisticsConfig
 
 
 class ModeAPI(object):
@@ -12,6 +13,7 @@ class ModeAPI(object):
 		self.dc = DesignerConfig(config_db)
 		self.cc = CollectionConfig(config_db)
 		self.gc = GarmentConfig(config_db)
+		self.sc = StatisticsConfig(config_db)
 
 	# GET /modeapi/portfolios/{did:\d+}
 	def get_portfolio_by_did(self):
@@ -24,7 +26,8 @@ class ModeAPI(object):
 				garments = self.gc.get_all_garments_by_designer_collection(did, collection.cid)
 				collection.garments = garments
 				collection_data.append(collection)
-			ret.collections = collection_data
+			ret.collections = collection_data # assign collections data
+			ret.likes_and_wishes = self.sc.get(did) # assign likes and wishes data
 			return ret
 
 	# GET /modeapi/portfolios/{curr_did:\d+}/next
@@ -54,6 +57,16 @@ class ModeAPI(object):
 	# GET /modeapi/experience/{did:\d+}
 	def get_experience_info(self):
 		did = int(self.request.matchdict['did'])
+		return self.dc.get(did).experience_content.sig_pics
+
+	# GET /modeapi/experience/sig_pics/{did:\d+}
+	def get_experience_sig_pics(self):
+		did = int(self.request.matchdict['did'])
+		return self.dc.get(did).experience_content.sig_pics
+
+	# GET /modeapi/experience/pics/{did:\d+}
+	def get_experience_pics(self):
+		did = int(self.request.matchdict['did'])
 		return self.dc.get(did).experience_content.pics
 
 	# GET /modeapi/dids
@@ -69,6 +82,14 @@ class ModeAPI(object):
 	def get_designer(self):
 		did = int(self.request.matchdict['did'])
 		return self.dc.get(did)
+
+	# PUT /modeapi/designers/{did:\d+}/like
+	def increment_likes(self):
+		return self.sc.do_like(int(self.request.matchdict['did']))
+
+	# PUT /modeapi/designers/{did:\d+}/wish
+	def increment_wishes(self):
+		return self.sc.do_wish(int(self.request.matchdict['did']))
 
 
 
@@ -94,8 +115,19 @@ def includeme(config):
 	config.add_route('garment_info', '/modeapi/garments/{did:\d+}/{cid:\d+}/{gid:\d+}')
 	add_view(config, 'garment_info', 'GET', 'get_garment_info')
 
+
+
 	config.add_route('experience_info', '/modeapi/experience/{did:\d+}')
 	add_view(config, 'experience_info', 'GET', 'get_experience_info')
+
+	config.add_route('experience_sig_pics', '/modeapi/experience/sig_pics/{did:\d+}')
+	add_view(config, 'experience_sig_pics', 'GET', 'get_experience_sig_pics')
+
+	config.add_route('experience_pics', '/modeapi/experience/pics/{did:\d+}')
+	add_view(config, 'experience_pics', 'GET', 'get_experience_pics')
+
+
+
 
 	config.add_route('did_list', '/modeapi/dids')
 	add_view(config, 'did_list', 'GET', 'get_dids')
@@ -105,3 +137,9 @@ def includeme(config):
 
 	config.add_route('designer', '/modeapi/designers/{did:\d+}')
 	add_view(config, 'designer', 'GET', 'get_designer')
+
+	config.add_route('do_like', '/modeapi/designers/{did:\d+}/like')
+	add_view(config, 'do_like', 'PUT', 'increment_likes')
+
+	config.add_route('do_wish', '/modeapi/designers/{did:\d+}/wish')
+	add_view(config, 'do_wish', 'PUT', 'increment_wishes')
