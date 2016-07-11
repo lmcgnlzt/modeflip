@@ -127,6 +127,7 @@ d = Designer(
 		bio=bio,
 		experience_content=experience_content,
 		exclusive_content=exclusive_content,
+		pre_mkt_content=pre_mkt_content,
 		signatrue_products=signatrue_products,
 		private_musics=private_musics,
 		)
