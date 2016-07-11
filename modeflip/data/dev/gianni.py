@@ -28,9 +28,17 @@ gc = GarmentConfig(config_db)
 DID = 3
 
 
-intro = "Gianni Guaglianone ，来自意大利，Maxmara 全球设计总监，原Cerruti 1881（卓诺迪/切瑞蒂）首席设计总监，Donna Karan高级设计师。意大利Vogue的主编Carla Sozzani邀请Gianni参加在业内地位举足轻重的时尚大赛“谁是下一个罗马时尚大师”，Gianni在万众瞩目中赢得了比赛，获得MaxMara青睐，成为品牌的灵魂人物，意大利时尚界举足轻重的一位设计师。"
-bio = "Gianni Guaglianone ，来自意大利，Maxmara 全球设计总监。Gianni出生在意大利一个做时尚和生产的家庭，从小就对用图案自我表达的概念十分着迷，天赋异禀的他在享誉盛名的伦敦皇家艺术学院学习时尚设计专业，并习得了如何将才华通过现实技巧真正实现在一件服装设计作品中。在Gianni的毕业设计大秀上，作为评委前来的Cerruti 1881（卓诺迪/切瑞蒂）创始人尼诺切瑞蒂一眼相中Gianni并将他收入麾下，Gianni就这样加入了一个男装品牌，并成功地在任职两年内将销售提高了40%，为这个意大利经典男装品牌增添了新鲜的色彩。在Cerruti在米兰的的一场大秀中，来自纽约的著名时装设计师Donna Karan在第一排看秀，并被Gianni为品牌带来的改变而惊喜万分，在秀结束时便邀请Gianni加入她的设计团队，当时Donna Karan刚刚被Louis Vuitton集团收购正在准备重磅推出全新的男装系列，而Gianni的加入让新系列如虎添翼。2006年，出于一直以来对女装设计的热爱，Gianni开始构思自己的女装品牌，当时意大利Vogue的主编Carla Sozzani邀请Gianni参加在业内地位举足轻重的时尚大赛“谁是下一个罗马时尚大师”，Gianni在万众瞩目中赢得了比赛，并在赛后拿到了MaxMara投来的橄榄枝，正式加入MaxMara担任全球首席设计总监，开始谱写至今长达九年的传奇篇章，在第一年便将销量提升32%，同时将品牌带到了亚洲市场。"
+intro = "Gianni Guaglianone，来自意大利，Maxmara 全球设计总监，原Cerruti 1881（卓诺迪/切瑞蒂）首席设计总监，Donna Karan高级设计师。意大利Vogue的主编Carla Sozzani邀请Gianni参加在业内地位举足轻重的时尚大赛“谁是下一个罗马时尚大师”，Gianni在万众瞩目中赢得了比赛，获得MaxMara青睐，成为品牌的灵魂人物，意大利时尚界举足轻重的一位设计师。"
+bio = """Gianni Guaglianone，来自意大利，Maxmara 全球设计总监。
 
+|Gianni出生在意大利一个做时尚和生产的家庭，从小就对用图案自我表达的概念十分着迷，天赋异禀的他在享誉盛名的伦敦皇家艺术学院学习时尚设计专业，并习得了如何将才华通过现实技巧真正实现在一件服装设计作品中。
+
+|在Gianni的毕业设计大秀上，作为评委前来的Cerruti 1881（卓诺迪/切瑞蒂）创始人尼诺切瑞蒂一眼相中Gianni并将他收入麾下，Gianni就这样加入了一个男装品牌，并成功地在任职两年内将销售提高了40%，为这个意大利经典男装品牌增添了新鲜的色彩。
+
+|在Cerruti在米兰的的一场大秀中，来自纽约的著名时装设计师Donna Karan在第一排看秀，并被Gianni为品牌带来的改变而惊喜万分，在秀结束时便邀请Gianni加入她的设计团队，当时Donna Karan刚刚被Louis Vuitton集团收购正在准备重磅推出全新的男装系列，而Gianni的加入让新系列如虎添翼。
+
+|2006年，出于一直以来对女装设计的热爱，Gianni开始构思自己的女装品牌，当时意大利Vogue的主编Carla Sozzani邀请Gianni参加在业内地位举足轻重的时尚大赛“谁是下一个罗马时尚大师”，Gianni在万众瞩目中赢得了比赛，并在赛后拿到了MaxMara投来的橄榄枝，正式加入MaxMara担任全球首席设计总监，开始谱写至今长达九年的传奇篇章，在第一年便将销量提升32%，同时将品牌带到了亚洲市场。
+"""
 
 profile_images = ProfileImages(
 		icon_url='images/resources/gianni/icon/icon.jpg',
@@ -70,7 +78,7 @@ exclusive_content = ExclusiveContent(
 
 pre_mkt_content = PreMarketContent(
 		target_date='July 20, 2016 12:00:00',
-		target_pic='images/resources/gianni/experience/pics/11.jpg',
+		target_pic='images/resources/gianni/premarket/soon.jpg',
 		)
 
 

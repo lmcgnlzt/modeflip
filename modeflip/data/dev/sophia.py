@@ -29,7 +29,17 @@ DID = 1
 
 
 intro = "Sophia Tezel，来自澳大利亚，Burberry全球时尚顾问，Juicy Couture，Rebecca Minkoff全球设计总监，好莱坞女星及歌手最爱的设计师之一，包括Taylor Swift,暮光之城女主角Christine Stewart、纽约第一社交名媛Olivia Palermo（gossip girl现实版）、Sex and the City女主角Sarah Jessica Parker、维密天使Miranda Kerr等。"
-bio = "Sophia Tezel，来自澳大利亚，Burberry全球时尚顾问，Juicy Couture，Rebecca Minkoff全球设计总监。Sophia Tezel从小在爸妈的服装工厂长大，耳濡目染下拥有了对时尚敏锐的嗅觉，和对工艺精巧的把握，并将这些渗透她的每一件设计作品之中。她认为时尚应该是美与实穿的结合，是有着让人惊艳的细节而让人总想再多看一眼。Sophia的身影总是出现在时尚的一线前沿，为包括Rebecca Minkoff、Nicole Miller、Juicy Couture等纽约年轻人钟爱的品牌担任设计总监，将她极高标准的国际品牌设计惊艳为品牌注入新鲜血液带来全新活力。为了达到美与实穿的完美结合，她总是倾注其才华与多年在设计开发生产的经验。她的身边永远有面料、纸板、无数的细节包围，而时至今日的她依然会为色彩、质感、工艺—所有组成一件完美服装的元素而激动和澎湃，对她而言，一件服装的诞生是一个有魔力的美好的过程。Sophia，在二十几岁时曾在悉尼创建自己的品牌，后来带着一颗要在世界时尚的中心大展拳脚的野心来到了美国纽约。她自己的品牌IS获得了无数的赞美和掌声，当时销往美国顶级奢侈品百货商场包括Barneys、Bergdorf Goodman、Saks等等。年轻的她很早便登上各大时尚杂志，包括Vogue、Elle、WWWD等。Sophia的设计总是受到好莱坞明星和歌手的青睐，包括Taylor Swift,暮光之城女主角Christine Stewart、纽约第一社交名媛Olivia Palermo（gossip girl现实版）、Sex and the City女主角Sarah Jessica Parker、维密天使Miranda Kerr等等。如今Sophia想用她对牛仔的热爱为时尚圈带来一个全新的牛仔品牌，并与2016年在纽约华丽亮相。"
+bio = """Sophia Tezel，来自澳大利亚，Burberry全球时尚顾问，Juicy Couture，Rebecca Minkoff全球设计总监。
+
+|Sophia Tezel从小在爸妈的服装工厂长大，耳濡目染下拥有了对时尚敏锐的嗅觉，和对工艺精巧的把握，并将这些渗透她的每一件设计作品之中。她认为时尚应该是美与实穿的结合，是有着让人惊艳的细节而让人总想再多看一眼。
+
+|Sophia的身影总是出现在时尚的一线前沿，为包括Rebecca Minkoff、Nicole Miller、Juicy Couture等纽约年轻人钟爱的品牌担任设计总监，将她极高标准的国际品牌设计惊艳为品牌注入新鲜血液带来全新活力。为了达到美与实穿的完美结合，她总是倾注其才华与多年在设计开发生产的经验。她的身边永远有面料、纸板、无数的细节包围，而时至今日的她依然会为色彩、质感、工艺—所有组成一件完美服装的元素而激动和澎湃，对她而言，一件服装的诞生是一个有魔力的美好的过程。
+
+|Sophia，在二十几岁时曾在悉尼创建自己的品牌，后来带着一颗要在世界时尚的中心大展拳脚的野心来到了美国纽约。她自己的品牌IS获得了无数的赞美和掌声，当时销往美国顶级奢侈品百货商场包括Barneys、Bergdorf Goodman、Saks等等。年轻的她很早便登上各大时尚杂志，包括Vogue、Elle、WWWD等。
+
+|Sophia的设计总是受到好莱坞明星和歌手的青睐，包括Taylor Swift,暮光之城女主角Christine Stewart、纽约第一社交名媛Olivia Palermo（gossip girl现实版）、Sex and the City女主角Sarah Jessica Parker、维密天使Miranda Kerr等等。
+
+|如今Sophia想用她对牛仔的热爱为时尚圈带来一个全新的牛仔品牌，并与2016年在纽约华丽亮相。"""
 
 
 profile_images = ProfileImages(
@@ -66,6 +76,12 @@ exclusive_content = ExclusiveContent(
 		'images/resources/sophia/exclusive/pics/1.jpg',
 		],
 	)
+
+
+pre_mkt_content = PreMarketContent(
+		target_date='July 20, 2016 12:00:00',
+		target_pic='images/resources/sophia/premarket/soon.jpg',
+		)
 
 
 signatrue_products = [
@@ -106,12 +122,13 @@ d = Designer(
 		name='Sophia Tezel',
 		profile_images=profile_images,
 		is_active=True,
-		on_market=True,
+		on_market=False,
 		origin='纽约',
 		intro=intro,
 		bio=bio,
 		experience_content=experience_content,
 		exclusive_content=exclusive_content,
+		pre_mkt_content=pre_mkt_content,
 		signatrue_products=signatrue_products,
 		private_musics=private_musics,
 		)
