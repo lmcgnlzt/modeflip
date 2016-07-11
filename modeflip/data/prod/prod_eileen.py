@@ -29,8 +29,16 @@ DID = 2
 
 
 intro = "Eileen Sullivan，来自英国，Ralph Lauren全球设计副总裁22年，和Ralph先生一起建立起Ralph Lauren时尚帝国，同时被大名鼎鼎的唐纳川普（Donald John Trump）的女儿伊万卡川普 (Ivanka Trump)钦点，为其同名时尚品牌伊凡卡川普担任创意总监。目前担任着FIT时尚设计学院的客座讲师，是美国具有重要地位的设计师。"
-bio = "Eileen Sullivan 来自英国，在巴黎和伦敦长大，从时尚设计专业毕业后，Eileen便被美国最经典奢侈品Ralph Lauren钦点，随后作为Ralph先生的左膀右臂任命全球设计副总裁长达22年，和Ralph先生一起建立起Ralph Lauren时尚帝国。在22年中，Eileen重新定义了RL品牌的美国休闲服装风格，在她的设计管理下，Ralph Lauren在全球范围内开创了Polo Ralph Lauren的顶级经典的系列，包括RL蓝标、童装、运动、内衣、泳装、高尔夫等等。Eileen同时被大名鼎鼎的唐纳川普（Donald John Trump）的女儿伊凡卡川普 (Ivanka Trump)钦点，为其同名时尚品牌伊凡卡川普担任创意总监。Eileen现在住在美国东岸的玛莎葡萄园岛，带来她自有品牌，Love for Edie及SquibeeS,同时担任着FIT时尚设计学院的客座讲师，是美国具有重要地位的设计师。"
+bio = """Eileen Sullivan，来自英国，任Ralph Lauren全球设计副总裁22年，与Ralph先生一起建立起Ralph Lauren时尚帝国。
 
+|Eileen在巴黎和伦敦长大，从时尚设计专业毕业后，便被美国最经典奢侈品Ralph Lauren钦点，随后作为Ralph先生的左膀右臂任命全球设计副总裁。
+
+|在22年中，Eileen重新定义了RL品牌的美国休闲服装风格，在她的设计管理下，Ralph Lauren在全球范围内开创了Polo Ralph Lauren的顶级经典的系列，包括RL蓝标、童装、运动、内衣、泳装、高尔夫等等。
+
+|Eileen同时被大名鼎鼎的唐纳川普(Donald Trump) 的女儿伊凡卡川普 (Ivanka Trump) 钦点，为其同名时尚品牌伊凡卡川普担任创意总监。
+
+|Eileen现在住在美国东岸的玛莎葡萄园岛，带来她自有品牌，Love for Edie及SquibeeS，同时担任着FIT时尚设计学院的客座讲师，是美国具有重要地位的设计师。
+"""
 
 profile_images = ProfileImages(
 		icon_url='http://assets.modeflip.com/eileen/icon/icon.jpg',
@@ -67,6 +75,12 @@ exclusive_content = ExclusiveContent(
 		'http://assets.modeflip.com/eileen/exclusive/pics/1.jpg',
 		],
 	)
+
+
+pre_mkt_content = PreMarketContent(
+		target_date='July 20, 2016 12:00:00',
+		target_pic='http://assets.modeflip.com/eileen/premarket/soon.jpg',
+		)
 
 
 signatrue_products = [
@@ -107,7 +121,7 @@ d = Designer(
 		name='Eileen Sullivan',
 		profile_images=profile_images,
 		is_active=True,
-		on_market=True,
+		on_market=False,
 		origin='英国',
 		intro=intro,
 		bio=bio,

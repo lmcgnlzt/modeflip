@@ -30,6 +30,22 @@ class ModeAPI(object):
 			ret.likes_and_wishes = self.sc.get(did) # assign likes and wishes data
 			return ret
 
+	# GET /modeapi/collections
+	def get_collections(self):
+		dids = self.dc.get_all_ids()
+		ret = []
+		for did in dids:
+			designer = self.dc.get(did)
+			collection_data = []
+			collections = self.cc.get_latest_collections_by_designer(did, limit=2)
+			for collection in collections:
+				garments = self.gc.get_all_garments_by_designer_collection(did, collection.cid)
+				collection.garments = garments
+				collection_data.append(collection)
+			designer.collections = collection_data
+			ret.append(designer.__json__())
+		return {'dids': dids, 'result': ret}
+
 	# GET /modeapi/portfolios/{curr_did:\d+}/next
 	def get_next_portfolio(self):
 		curr_did = int(self.request.matchdict['curr_did'])
@@ -143,3 +159,7 @@ def includeme(config):
 
 	config.add_route('do_wish', '/modeapi/designers/{did:\d+}/wish')
 	add_view(config, 'do_wish', 'PUT', 'increment_wishes')
+
+
+	config.add_route('collections', '/modeapi/collections')
+	add_view(config, 'collections', 'GET', 'get_collections')
