@@ -48,7 +48,7 @@ profile_images = ProfileImages(
 
 ids = ['0', '1', '3', '4', '5', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '50', '51', '52']
 pics = [Picture(thumbnail='http://assets.modeflip.com/eileen/experience/pics/{}s.jpg'.format(i), image='http://assets.modeflip.com/eileen/experience/pics/{}.jpg'.format(i)) for i in ids]
-sig_pics = random.sample(pics, 24)
+sig_pics = random.sample(pics, 24) if len(pics) >= 24 else pics
 
 experience_content = ExperienceContent(
 	brands=[

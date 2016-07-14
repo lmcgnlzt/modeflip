@@ -49,7 +49,7 @@ profile_images = ProfileImages(
 
 ids = ['0', '1', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '14', '15', '18', '19', '20', '21', '23', '24', '25', '26', '27', '28', '29', '30', '31', '32', '33', '34', '35', '36', '37', '38', '40', '41', '42', '43', '44', '45', '46']
 pics = [Picture(thumbnail='http://assets.modeflip.com/sophia/experience/pics/{}s.jpg'.format(i), image='http://assets.modeflip.com/sophia/experience/pics/{}.jpg'.format(i)) for i in ids]
-sig_pics = random.sample(pics, 24)
+sig_pics = random.sample(pics, 24) if len(pics) >= 24 else pics
 
 experience_content = ExperienceContent(
 	brands=[
