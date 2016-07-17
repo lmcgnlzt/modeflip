@@ -28,8 +28,8 @@ gc = GarmentConfig(config_db)
 DID = 1
 
 
-intro = "Sophia Tezel，来自澳大利亚，Burberry全球时尚顾问，Juicy Couture，Rebecca Minkoff全球设计总监，好莱坞女星及歌手最爱的设计师之一，包括Taylor Swift,暮光之城女主角Christine Stewart、纽约第一社交名媛Olivia Palermo（gossip girl现实版）、Sex and the City女主角Sarah Jessica Parker、维密天使Miranda Kerr等。"
-bio = """Sophia Tezel，来自澳大利亚，Burberry全球时尚顾问，Juicy Couture，Rebecca Minkoff全球设计总监。
+intro = "来自纽约，Burberry全球时尚顾问，Juicy Couture，Rebecca Minkoff全球设计总监，好莱坞女星及歌手最爱的设计师之一，包括Taylor Swift,暮光之城女主角Christine Stewart、纽约第一社交名媛Olivia Palermo（gossip girl现实版）、Sex and the City女主角Sarah Jessica Parker、维密天使Miranda Kerr等。"
+bio = """Sophia Tezel，来自纽约，Burberry全球时尚顾问，Juicy Couture，Rebecca Minkoff全球设计总监。
 
 |Sophia Tezel从小在爸妈的服装工厂长大，耳濡目染下拥有了对时尚敏锐的嗅觉，和对工艺精巧的把握，并将这些渗透她的每一件设计作品之中。她认为时尚应该是美与实穿的结合，是有着让人惊艳的细节而让人总想再多看一眼。
 
@@ -49,7 +49,10 @@ profile_images = ProfileImages(
 	)
 
 pics = [Picture(thumbnail='images/resources/sophia/experience/pics/{}s.jpg'.format(i), image='images/resources/sophia/experience/pics/{}.jpg'.format(i)) for i in range(0, 74) if os.path.isfile('/Users/mli/modeapp/modeapp/static/images/resources/sophia/experience/pics/{}s.jpg'.format(i))]
-sig_pics = random.sample(pics, 24)
+
+sig_pics_ids = [24, 45, 6, 44, 14, 46, 49, 38, 32, 21, 33, 34, 23, 42, 5, 20]
+sig_pics = [Picture(thumbnail='images/resources/sophia/experience/pics/{}s.jpg'.format(i), image='images/resources/sophia/experience/pics/{}.jpg'.format(i)) for i in sig_pics_ids if os.path.isfile('/Users/mli/modeapp/modeapp/static/images/resources/sophia/experience/pics/{}s.jpg'.format(i))]
+
 
 experience_content = ExperienceContent(
 	brands=[
@@ -123,7 +126,7 @@ d = Designer(
 		profile_images=profile_images,
 		is_active=True,
 		on_market=False,
-		origin='纽约',
+		origin='NEW YORK',
 		intro=intro,
 		bio=bio,
 		experience_content=experience_content,

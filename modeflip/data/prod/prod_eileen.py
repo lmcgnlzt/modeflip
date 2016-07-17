@@ -28,8 +28,8 @@ gc = GarmentConfig(config_db)
 DID = 2
 
 
-intro = "Eileen Sullivan，来自英国，Ralph Lauren全球设计副总裁22年，和Ralph先生一起建立起Ralph Lauren时尚帝国，同时被大名鼎鼎的唐纳川普（Donald John Trump）的女儿伊万卡川普 (Ivanka Trump)钦点，为其同名时尚品牌伊凡卡川普担任创意总监。目前担任着FIT时尚设计学院的客座讲师，是美国具有重要地位的设计师。"
-bio = """Eileen Sullivan，来自英国，任Ralph Lauren全球设计副总裁22年，与Ralph先生一起建立起Ralph Lauren时尚帝国。
+intro = "来自纽约，Ralph Lauren全球设计副总裁22年，和Ralph先生一起建立起Ralph Lauren时尚帝国，同时被大名鼎鼎的唐纳川普（Donald John Trump）的女儿伊万卡川普 (Ivanka Trump)钦点，为其同名时尚品牌伊凡卡川普担任创意总监。目前担任着FIT时尚设计学院的客座讲师，是美国具有重要地位的设计师。"
+bio = """Eileen Sullivan，来自纽约，任Ralph Lauren全球设计副总裁22年，与Ralph先生一起建立起Ralph Lauren时尚帝国。
 
 |Eileen在巴黎和伦敦长大，从时尚设计专业毕业后，便被美国最经典奢侈品Ralph Lauren钦点，随后作为Ralph先生的左膀右臂任命全球设计副总裁。
 
@@ -48,12 +48,15 @@ profile_images = ProfileImages(
 
 ids = ['0', '1', '3', '4', '5', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '50', '51', '52']
 pics = [Picture(thumbnail='http://assets.modeflip.com/eileen/experience/pics/{}s.jpg'.format(i), image='http://assets.modeflip.com/eileen/experience/pics/{}.jpg'.format(i)) for i in ids]
-sig_pics = random.sample(pics, 24) if len(pics) >= 24 else pics
+
+sig_pics_ids = [1, 14, 3, 13, 5, 4, 15, 16, 17, 18, 19, 20, 21, 22, 23, 52]
+sig_pics = [Picture(thumbnail='http://assets.modeflip.com/eileen/experience/pics/{}s.jpg'.format(i), image='http://assets.modeflip.com/eileen/experience/pics/{}.jpg'.format(i)) for i in sig_pics_ids]
+
 
 experience_content = ExperienceContent(
 	brands=[
-		'http://assets.modeflip.com/eileen/experience/brand/eide.jpg',
 		'http://assets.modeflip.com/eileen/experience/brand/rl.jpg',
+		'http://assets.modeflip.com/eileen/experience/brand/eide.jpg',
 		'http://assets.modeflip.com/eileen/experience/brand/squibees.jpg',
 		'http://assets.modeflip.com/eileen/experience/brand/trump.jpg',
 		],
@@ -122,7 +125,7 @@ d = Designer(
 		profile_images=profile_images,
 		is_active=True,
 		on_market=False,
-		origin='英国',
+		origin='NEW YORK',
 		intro=intro,
 		bio=bio,
 		experience_content=experience_content,
