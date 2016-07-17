@@ -28,7 +28,7 @@ gc = GarmentConfig(config_db)
 DID = 3
 
 
-intro = "Gianni Guaglianone，来自意大利，Maxmara 全球设计总监，原Cerruti 1881（卓诺迪/切瑞蒂）首席设计总监，Donna Karan高级设计师。意大利Vogue的主编Carla Sozzani邀请Gianni参加在业内地位举足轻重的时尚大赛“谁是下一个罗马时尚大师”，Gianni在万众瞩目中赢得了比赛，获得MaxMara青睐，成为品牌的灵魂人物，意大利时尚界举足轻重的一位设计师。"
+intro = "来自意大利，Maxmara 全球设计总监，原Cerruti 1881（卓诺迪/切瑞蒂）首席设计总监，Donna Karan高级设计师。意大利Vogue的主编Carla Sozzani邀请Gianni参加在业内地位举足轻重的时尚大赛“谁是下一个罗马时尚大师”，Gianni在万众瞩目中赢得了比赛，获得MaxMara青睐，成为品牌的灵魂人物，意大利时尚界举足轻重的一位设计师。"
 bio = """Gianni Guaglianone，来自意大利，Maxmara 全球设计总监。
 
 |Gianni出生在意大利一个做时尚和生产的家庭，从小就对用图案自我表达的概念十分着迷，天赋异禀的他在享誉盛名的伦敦皇家艺术学院学习时尚设计专业，并习得了如何将才华通过现实技巧真正实现在一件服装设计作品中。
@@ -47,13 +47,16 @@ profile_images = ProfileImages(
 	)
 
 pics = [Picture(thumbnail='images/resources/gianni/experience/pics/{}s.jpg'.format(i), image='images/resources/gianni/experience/pics/{}.jpg'.format(i)) for i in range(0, 74) if os.path.isfile('/Users/mli/modeapp/modeapp/static/images/resources/gianni/experience/pics/{}s.jpg'.format(i))]
-sig_pics = random.sample(pics, 24)
+
+sig_pics_ids = [4, 49, 5, 3, 2, 11, 54, 8, 40, 1, 9, 36, 48, 52, 12, 44]
+sig_pics = [Picture(thumbnail='images/resources/gianni/experience/pics/{}s.jpg'.format(i), image='images/resources/gianni/experience/pics/{}.jpg'.format(i)) for i in sig_pics_ids if os.path.isfile('/Users/mli/modeapp/modeapp/static/images/resources/gianni/experience/pics/{}s.jpg'.format(i))]
+
 
 experience_content = ExperienceContent(
 	brands=[
+		'images/resources/gianni/experience/brand/maxmara.jpg',
 		'images/resources/gianni/experience/brand/cerruti.jpg',
 		'images/resources/gianni/experience/brand/dkny.jpg',
-		'images/resources/gianni/experience/brand/maxmara.jpg',
 		'images/resources/gianni/experience/brand/gianni.jpg',
 		],
 	sig_pics = sig_pics,
@@ -121,7 +124,7 @@ d = Designer(
 		profile_images=profile_images,
 		is_active=True,
 		on_market=False,
-		origin='意大利',
+		origin='ITALY',
 		intro=intro,
 		bio=bio,
 		experience_content=experience_content,

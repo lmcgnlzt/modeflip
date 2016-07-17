@@ -28,7 +28,7 @@ gc = GarmentConfig(config_db)
 DID = 3
 
 
-intro = "Gianni Guaglianone ，来自意大利，Maxmara 全球设计总监，原Cerruti 1881（卓诺迪/切瑞蒂）首席设计总监，Donna Karan高级设计师。意大利Vogue的主编Carla Sozzani邀请Gianni参加在业内地位举足轻重的时尚大赛“谁是下一个罗马时尚大师”，Gianni在万众瞩目中赢得了比赛，获得MaxMara青睐，成为品牌的灵魂人物，意大利时尚界举足轻重的一位设计师。"
+intro = "来自意大利，Maxmara 全球设计总监，原Cerruti 1881（卓诺迪/切瑞蒂）首席设计总监，Donna Karan高级设计师。意大利Vogue的主编Carla Sozzani邀请Gianni参加在业内地位举足轻重的时尚大赛“谁是下一个罗马时尚大师”，Gianni在万众瞩目中赢得了比赛，获得MaxMara青睐，成为品牌的灵魂人物，意大利时尚界举足轻重的一位设计师。"
 bio = """Gianni Guaglianone，来自意大利，Maxmara 全球设计总监。
 
 |Gianni出生在意大利一个做时尚和生产的家庭，从小就对用图案自我表达的概念十分着迷，天赋异禀的他在享誉盛名的伦敦皇家艺术学院学习时尚设计专业，并习得了如何将才华通过现实技巧真正实现在一件服装设计作品中。
@@ -48,13 +48,16 @@ profile_images = ProfileImages(
 
 ids = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '25', '26', '27', '28', '29', '30', '31', '32', '33', '35', '36', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '63', '64', '65', '66', '68', '70', '71', '72', '73']
 pics = [Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/{}s.jpg'.format(i), image='http://assets.modeflip.com/gianni/experience/pics/{}.jpg'.format(i)) for i in ids]
-sig_pics = random.sample(pics, 24) if len(pics) >= 24 else pics
+
+sig_pics_ids = [4, 49, 5, 3, 2, 11, 54, 8, 40, 1, 9, 36, 48, 52, 12, 44]
+sig_pics = [Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/{}s.jpg'.format(i), image='http://assets.modeflip.com/gianni/experience/pics/{}.jpg'.format(i)) for i in sig_pics_ids]
+
 
 experience_content = ExperienceContent(
 	brands=[
+		'http://assets.modeflip.com/gianni/experience/brand/maxmara.jpg',
 		'http://assets.modeflip.com/gianni/experience/brand/cerruti.jpg',
 		'http://assets.modeflip.com/gianni/experience/brand/dkny.jpg',
-		'http://assets.modeflip.com/gianni/experience/brand/maxmara.jpg',
 		'http://assets.modeflip.com/gianni/experience/brand/gianni.jpg',
 		],
 	sig_pics = sig_pics,
@@ -122,7 +125,7 @@ d = Designer(
 		profile_images=profile_images,
 		is_active=True,
 		on_market=False,
-		origin='意大利',
+		origin='ITALY',
 		intro=intro,
 		bio=bio,
 		experience_content=experience_content,
