@@ -21,7 +21,7 @@ class ModeAPI(object):
 	# GET /modeapi/portfolios/{did:\d+}
 	def get_portfolio_by_did(self):
 		did = int(self.request.matchdict['did'])
-		LOGGER.warning('get_portfolio_by_did called for designer ID [{}]'.format(did))
+		# LOGGER.warning('get_portfolio_by_did called for designer ID [{}]'.format(did))
 		ret = self.dc.get(did)
 		if ret:
 			collection_data = []
