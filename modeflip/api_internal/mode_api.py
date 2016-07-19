@@ -4,6 +4,9 @@ from modeflip.models.collection import Collection, CollectionConfig
 from modeflip.models.garment import Garment, GarmentConfig
 from modeflip.models.statistics import Statistics, StatisticsConfig
 
+import logging
+LOGGER = logging.getLogger(__name__)
+
 
 class ModeAPI(object):
 
@@ -18,6 +21,7 @@ class ModeAPI(object):
 	# GET /modeapi/portfolios/{did:\d+}
 	def get_portfolio_by_did(self):
 		did = int(self.request.matchdict['did'])
+		LOGGER.warning('get_portfolio_by_did called for designer ID [{}]'.format(did))
 		ret = self.dc.get(did)
 		if ret:
 			collection_data = []
