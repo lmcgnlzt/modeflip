@@ -125,7 +125,7 @@ d = Designer(
 		name='Sophia Tezel',
 		profile_images=profile_images,
 		is_active=True,
-		on_market=False,
+		on_market=True,
 		origin='NEW YORK',
 		intro=intro,
 		bio=bio,
@@ -144,15 +144,14 @@ print 'designer info saved'
 
 
 ############################################################################################################
-CID_2 = 2
 CID_1 = 1
 
 
-c_july = Collection(
-		cid=CID_2,
+c_aug = Collection(
+		cid=CID_1,
 		did=DID,
-		title='七月限量主题春夏系列',
-		released=datetime(2016, 7, 15),
+		title='八月限量主题春夏系列',
+		released=datetime(2016, 7, 24),
 		# signatrue_pics=[
 		# 	'images/resources/sophia/collections/201607/signature/pics/1.jpg',
 		# 	'images/resources/sophia/collections/201607/signature/pics/2.jpg',
@@ -172,30 +171,8 @@ c_july = Collection(
 		)
 
 
-c_june = Collection(
-		cid=CID_1,
-		did=DID,
-		title='六月限量主题春夏系列',
-		released=datetime(2016, 6, 15),
-		# signatrue_pics=[
-		# 	'images/resources/sophia/images/modeflip/collections/june/signature/1.jpg',
-		# 	'images/resources/sophia/images/modeflip/collections/june/signature/2.jpg',
-		# ],
-		# signatrue_videos=[
-		# 	'images/modeflip/MaxMara_Spring_Summer_2011_MilanHD2.mp4',
-		# ],
-		# signatrue_musics=[
-		# 	'http://sig_music_1.com',
-		# 	'http://sig_music_2.com',
-		# ],
-		new_arrival=False,
-		)
-
-
-
 collections = [
-	c_july,
-	c_june,
+	c_aug,
 ]
 
 [cc.set(c) for c in collections]
@@ -207,77 +184,45 @@ print 'collection info saved'
 ############################################################################################################
 
 
-g_july_1 = Garment(
-				gid=1,
-				cid=CID_2,
-				did=DID,
-				price=888,
-				shop_link='http://shop_link',
-				pic = Picture(title="蕾丝花边裙", image='images/resources/sophia/collections/201607/garments/1/pre1.jpg'),
-				details=[
-					Picture(title="蕾丝花边裙", image='images/resources/sophia/collections/201607/garments/1/pre1.jpg'),
-					Picture(title="细节1", image='images/resources/sophia/collections/201607/garments/1/details/1.jpg'),
-					Picture(title="细节2", image='images/resources/sophia/collections/201607/garments/1/details/2.jpg'),
-					Picture(title="细节3", image='images/resources/sophia/collections/201607/garments/1/details/3.jpg'),
-					Picture(title="细节4", image='images/resources/sophia/collections/201607/garments/1/details/4.jpg'),
-						]
-				)
-
-
-g_july_2 = Garment(
-				gid=2,
-				cid=CID_2,
-				did=DID,
-				price=888,
-				shop_link='http://shop_link',
-				pic = Picture(title="蕾丝花边裙", image='images/resources/sophia/collections/201607/garments/1/pre1.jpg'),
-				details=[
-					Picture(title="无袖开衩长裙", image='images/resources/sophia/collections/201607/garments/2/1s.jpg'),
-					Picture(title="细节1", image='images/resources/sophia/collections/201607/garments/2/details/1.jpg'),
-					Picture(title="细节2", image='images/resources/sophia/collections/201607/garments/2/details/2.jpg'),
-						]
-				)
-
-
-
-g_june_1 = Garment(
+g_aug_1 = Garment(
 				gid=1,
 				cid=CID_1,
 				did=DID,
-				price=777,
-				shop_link='http://shop_link',
-				pic = Picture(title="蕾丝花边裙", image='images/resources/sophia/collections/201607/garments/1/pre1.jpg'),
-				details=[
-					Picture(title="蕾丝花边裙", image='images/resources/sophia/collections/201607/garments/1/pre1.jpg'),
-					Picture(title="细节1", image='images/resources/sophia/collections/201607/garments/1/details/1.jpg'),
-					Picture(title="细节2", image='images/resources/sophia/collections/201607/garments/1/details/2.jpg'),
-					Picture(title="细节3", image='images/resources/sophia/collections/201607/garments/1/details/3.jpg'),
-					Picture(title="细节4", image='images/resources/sophia/collections/201607/garments/1/details/4.jpg'),
-						]
+				price=888,
+				shop_link='https://wap.koudaitong.com/v2/goods/2fnvbq4tfd99f',
+				pic = Picture(title="白色黑色蕾丝衬衫", image='images/resources/sophia/collections/201608/garments/1/cover.jpg'),
+				# details=[
+				# 	Picture(title="整体正面效果", image='images/resources/sophia/collections/201608/garments/1/details/4.jpg'),
+				# 	Picture(title="细节1", image='images/resources/sophia/collections/201608/garments/1/details/5.jpg'),
+				# 	Picture(title="细节2", image='images/resources/sophia/collections/201608/garments/1/details/6.jpg'),
+				# 	Picture(title="细节3", image='images/resources/sophia/collections/201608/garments/1/details/7.jpg'),
+				# 	Picture(title="细节4", image='images/resources/sophia/collections/201608/garments/1/details/8.jpg'),
+				# 	Picture(title="细节4", image='images/resources/sophia/collections/201608/garments/1/details/9.jpg'),
+				# 		]
 				)
 
 
-g_june_2 = Garment(
+g_aug_2 = Garment(
 				gid=2,
 				cid=CID_1,
 				did=DID,
-				price=777,
-				shop_link='http://shop_link',
-				pic = Picture(title="蕾丝花边裙", image='images/resources/sophia/collections/201607/garments/1/pre1.jpg'),
-				details=[
-					Picture(title="无袖开衩长裙", image='images/resources/sophia/collections/201607/garments/2/1s.jpg'),
-					Picture(title="细节1", image='images/resources/sophia/collections/201607/garments/2/details/1.jpg'),
-					Picture(title="细节2", image='images/resources/sophia/collections/201607/garments/2/details/2.jpg'),
-						]
+				price=888,
+				shop_link='https://wap.koudaitong.com/v2/goods/3np6vyfkgazpf',
+				pic = Picture(title="黑色蕾丝衬衫", image='images/resources/sophia/collections/201608/garments/2/cover.jpg'),
+				# details=[
+				# 	Picture(title="细节1", image='images/resources/sophia/collections/201608/garments/2/details/2.jpg'),
+				# 	Picture(title="细节2", image='images/resources/sophia/collections/201608/garments/2/details/3.jpg'),
+				# 	Picture(title="细节3", image='images/resources/sophia/collections/201608/garments/2/details/4.jpg'),
+				# 	Picture(title="细节4", image='images/resources/sophia/collections/201608/garments/2/details/5.jpg'),
+				# 	Picture(title="细节5", image='images/resources/sophia/collections/201608/garments/2/details/6.jpg'),
+				# 		]
 				)
 
 
 
 garments = [
-	g_july_1,
-	g_july_2,
-	g_june_1,
-	g_june_2,
+	g_aug_1,
+	g_aug_2,
 ]
 
 [gc.set(g) for g in garments]
