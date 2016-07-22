@@ -191,14 +191,14 @@ g_aug_1 = Garment(
 				price=888,
 				shop_link='https://wap.koudaitong.com/v2/goods/2fnvbq4tfd99f',
 				pic = Picture(title="白色黑色蕾丝衬衫", image='images/resources/sophia/collections/201608/garments/1/cover.jpg'),
-				# details=[
-				# 	Picture(title="整体正面效果", image='images/resources/sophia/collections/201608/garments/1/details/4.jpg'),
-				# 	Picture(title="细节1", image='images/resources/sophia/collections/201608/garments/1/details/5.jpg'),
-				# 	Picture(title="细节2", image='images/resources/sophia/collections/201608/garments/1/details/6.jpg'),
-				# 	Picture(title="细节3", image='images/resources/sophia/collections/201608/garments/1/details/7.jpg'),
-				# 	Picture(title="细节4", image='images/resources/sophia/collections/201608/garments/1/details/8.jpg'),
-				# 	Picture(title="细节4", image='images/resources/sophia/collections/201608/garments/1/details/9.jpg'),
-				# 		]
+				details=[
+					Picture(title="整体正面效果", image='images/resources/sophia/collections/201608/garments/1/details/4.jpg'),
+					Picture(title="细节1", image='images/resources/sophia/collections/201608/garments/1/details/5.jpg'),
+					Picture(title="细节2", image='images/resources/sophia/collections/201608/garments/1/details/6.jpg'),
+					Picture(title="细节3", image='images/resources/sophia/collections/201608/garments/1/details/7.jpg'),
+					Picture(title="细节4", image='images/resources/sophia/collections/201608/garments/1/details/8.jpg'),
+					Picture(title="细节4", image='images/resources/sophia/collections/201608/garments/1/details/9.jpg'),
+						]
 				)
 
 
@@ -209,13 +209,13 @@ g_aug_2 = Garment(
 				price=888,
 				shop_link='https://wap.koudaitong.com/v2/goods/3np6vyfkgazpf',
 				pic = Picture(title="黑色蕾丝衬衫", image='images/resources/sophia/collections/201608/garments/2/cover.jpg'),
-				# details=[
-				# 	Picture(title="细节1", image='images/resources/sophia/collections/201608/garments/2/details/2.jpg'),
-				# 	Picture(title="细节2", image='images/resources/sophia/collections/201608/garments/2/details/3.jpg'),
-				# 	Picture(title="细节3", image='images/resources/sophia/collections/201608/garments/2/details/4.jpg'),
-				# 	Picture(title="细节4", image='images/resources/sophia/collections/201608/garments/2/details/5.jpg'),
-				# 	Picture(title="细节5", image='images/resources/sophia/collections/201608/garments/2/details/6.jpg'),
-				# 		]
+				details=[
+					Picture(title="细节1", image='images/resources/sophia/collections/201608/garments/2/details/2.jpg'),
+					Picture(title="细节2", image='images/resources/sophia/collections/201608/garments/2/details/3.jpg'),
+					Picture(title="细节3", image='images/resources/sophia/collections/201608/garments/2/details/4.jpg'),
+					Picture(title="细节4", image='images/resources/sophia/collections/201608/garments/2/details/5.jpg'),
+					Picture(title="细节5", image='images/resources/sophia/collections/201608/garments/2/details/6.jpg'),
+						]
 				)
 
 
