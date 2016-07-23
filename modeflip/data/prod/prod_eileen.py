@@ -149,18 +149,21 @@ edie_collections = Collection(
 		cid=CID_1,
 		did=DID,
 		title='Love for Edie 系列',
+		desc='Eileen为MODE FLIP独家推出的"Love for Edie"品牌限量系列，重塑美国60年代当红影星Edie Sedgwick迷人的复古气质，时髦性感又点天真',
 		released=datetime(2016, 7, 24),
-		# signatrue_pics=[
-		# 	'http://assets.modeflip.com/eileen/collections/201607/signature/pics/1.jpg',
-		# 	'http://assets.modeflip.com/eileen/collections/201607/signature/pics/2.jpg',
-		# ],
-		# signatrue_videos=[
-		# 	Video(
-		# 		thumbnail='http://assets.modeflip.com/eileen/collections/201607/signature/videos/thumbnail.png',
-		# 		poster='http://assets.modeflip.com/eileen/collections/201607/signature/videos/thumbnail.jpg',
-		# 		url='http://assets.modeflip.com/eileen/collections/201607/signature/videos/MaxMara.mp4',
-		# 	)
-		# ],
+		signatrue_pics=[
+			'http://assets.modeflip.com/eileen/collections/edie/signature/pics/edie1.jpg',
+			'http://assets.modeflip.com/eileen/collections/edie/signature/pics/edie2.jpg',
+			'http://assets.modeflip.com/eileen/collections/edie/signature/pics/edie3.jpg',
+			'http://assets.modeflip.com/eileen/collections/edie/signature/pics/edie4.jpg',
+		],
+		signatrue_videos=[
+			Video(
+				thumbnail='http://assets.modeflip.com/eileen/collections/edie/signature/videos/edie_1.jpg',
+				poster='http://assets.modeflip.com/eileen/collections/edie/signature/videos/edie_1.jpg',
+				url='http://assets.modeflip.com/eileen/collections/edie/signature/videos/edie_1.mp4',
+			)
+		],
 		# signatrue_musics=[
 		# 	'http://sig_music_1.com',
 		# 	'http://sig_music_2.com',
@@ -174,11 +177,15 @@ squibees_collections = Collection(
 		cid=CID_2,
 		did=DID,
 		title='SquibeeS 系列',
+		desc='Elieen带来了来自Martha`s Vineyard(美国玛莎葡萄园岛）独特风情的SquibeeS品牌系列。在lambert Cove沙滩，享受全年充足的日照，白天帆船，冲浪；日落夜出，跟随街上的盛大的彩灯及欢乐的游行活动，躺在沙滩上看天空中燃放的烟花。SquibeeS，365天都是夏季一般阳光爽朗的好心情，顺便悄悄告诉你，好莱坞明星，艺术家，音乐家，政治家居住于此！',
 		released=datetime(2016, 7, 24),
-		# signatrue_pics=[
-		# 	'http://assets.modeflip.com/eileen/collections/201607/signature/pics/1.jpg',
-		# 	'http://assets.modeflip.com/eileen/collections/201607/signature/pics/2.jpg',
-		# ],
+		signatrue_pics=[
+			'http://assets.modeflip.com/eileen/collections/squibees/signature/pics/1.jpg',
+			'http://assets.modeflip.com/eileen/collections/squibees/signature/pics/2.jpg',
+			'http://assets.modeflip.com/eileen/collections/squibees/signature/pics/3.jpg',
+			'http://assets.modeflip.com/eileen/collections/squibees/signature/pics/4.jpg',
+			'http://assets.modeflip.com/eileen/collections/squibees/signature/pics/5.jpg',
+		],
 		# signatrue_videos=[
 		# 	Video(
 		# 		thumbnail='http://assets.modeflip.com/eileen/collections/201607/signature/videos/thumbnail.png',

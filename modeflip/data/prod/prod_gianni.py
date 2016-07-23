@@ -150,11 +150,12 @@ littleblackdress_colltion = Collection(
 		cid=CID_1,
 		did=DID,
 		title='Little Black Dress 系列',
+		desc='“Every woman should own a simple elegant black dress”。Gianni独家设计命名的优雅小黑裙仅在MODE FLIP平价发售，再现Maxmara经典小黑裙',
 		released=datetime(2016, 7, 24),
-		# signatrue_pics=[
-		# 	'http://assets.modeflip.com/gianni/collections/201607/signature/pics/1.jpg',
-		# 	'http://assets.modeflip.com/gianni/collections/201607/signature/pics/2.jpg',
-		# ],
+		signatrue_pics=[
+			'http://assets.modeflip.com/gianni/collections/littleblackdress/signature/pics/1.jpg',
+			'http://assets.modeflip.com/gianni/collections/littleblackdress/signature/pics/2.jpg',
+		],
 		# signatrue_videos=[
 		# 	Video(
 		# 		thumbnail='http://assets.modeflip.com/gianni/collections/201607/signature/videos/thumbnail.png',
