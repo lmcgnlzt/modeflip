@@ -25,7 +25,7 @@ gc = GarmentConfig(config_db)
 
 
 ############################################################################################################
-DID = 1
+DID = 3
 
 
 intro = "来自纽约，Burberry全球时尚顾问，Juicy Couture，Rebecca Minkoff全球设计总监，好莱坞女星及歌手最爱的设计师之一，包括Taylor Swift,暮光之城女主角Christine Stewart、纽约第一社交名媛Olivia Palermo（gossip girl现实版）、Sex and the City女主角Sarah Jessica Parker、维密天使Miranda Kerr等。"
