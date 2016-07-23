@@ -143,15 +143,14 @@ print 'designer info saved'
 
 
 ############################################################################################################
-CID_2 = 2
 CID_1 = 1
 
 
-c_july = Collection(
-		cid=CID_2,
+littleblackdress_colltion = Collection(
+		cid=CID_1,
 		did=DID,
-		title='七月限量主题春夏系列',
-		released=datetime(2016, 7, 15),
+		title='Little Black Dress 系列',
+		released=datetime(2016, 7, 24),
 		# signatrue_pics=[
 		# 	'http://assets.modeflip.com/gianni/collections/201607/signature/pics/1.jpg',
 		# 	'http://assets.modeflip.com/gianni/collections/201607/signature/pics/2.jpg',
@@ -171,30 +170,10 @@ c_july = Collection(
 		)
 
 
-c_june = Collection(
-		cid=CID_1,
-		did=DID,
-		title='六月限量主题春夏系列',
-		released=datetime(2016, 6, 15),
-		# signatrue_pics=[
-		# 	'http://assets.modeflip.com/gianni/images/modeflip/collections/june/signature/1.jpg',
-		# 	'http://assets.modeflip.com/gianni/images/modeflip/collections/june/signature/2.jpg',
-		# ],
-		# signatrue_videos=[
-		# 	'images/modeflip/MaxMara_Spring_Summer_2011_MilanHD2.mp4',
-		# ],
-		# signatrue_musics=[
-		# 	'http://sig_music_1.com',
-		# 	'http://sig_music_2.com',
-		# ],
-		new_arrival=False,
-		)
-
 
 
 collections = [
-	c_july,
-	c_june,
+	littleblackdress_colltion,
 ]
 
 [cc.set(c) for c in collections]
@@ -206,77 +185,69 @@ print 'collection info saved'
 ############################################################################################################
 
 
-g_july_1 = Garment(
-				gid=1,
-				cid=CID_2,
-				did=DID,
-				price=888,
-				shop_link='http://shop_link',
-				pic = Picture(title="蕾丝花边裙", image='http://assets.modeflip.com/gianni/collections/201607/garments/1/pre1.jpg'),
-				details=[
-					Picture(title="蕾丝花边裙", image='http://assets.modeflip.com/gianni/collections/201607/garments/1/pre1.jpg'),
-					Picture(title="细节1", image='http://assets.modeflip.com/gianni/collections/201607/garments/1/details/1.jpg'),
-					Picture(title="细节2", image='http://assets.modeflip.com/gianni/collections/201607/garments/1/details/2.jpg'),
-					Picture(title="细节3", image='http://assets.modeflip.com/gianni/collections/201607/garments/1/details/3.jpg'),
-					Picture(title="细节4", image='http://assets.modeflip.com/gianni/collections/201607/garments/1/details/4.jpg'),
-						]
-				)
-
-
-g_july_2 = Garment(
-				gid=2,
-				cid=CID_2,
-				did=DID,
-				price=888,
-				shop_link='http://shop_link',
-				pic = Picture(title="蕾丝花边裙", image='http://assets.modeflip.com/gianni/collections/201607/garments/1/pre1.jpg'),
-				details=[
-					Picture(title="无袖开衩长裙", image='http://assets.modeflip.com/gianni/collections/201607/garments/2/1s.jpg'),
-					Picture(title="细节1", image='http://assets.modeflip.com/gianni/collections/201607/garments/2/details/1.jpg'),
-					Picture(title="细节2", image='http://assets.modeflip.com/gianni/collections/201607/garments/2/details/2.jpg'),
-						]
-				)
-
-
-
-g_june_1 = Garment(
+aglaya_dress = Garment(
 				gid=1,
 				cid=CID_1,
 				did=DID,
-				price=777,
-				shop_link='http://shop_link',
-				pic = Picture(title="蕾丝花边裙", image='http://assets.modeflip.com/gianni/collections/201607/garments/1/pre1.jpg'),
+				price=870,
+				shop_link='https://wap.koudaitong.com/v2/goods/362t31f5jo1ab',
+				pic = Picture(title="Aglaya Dress - 小黑裙", image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/aglaya_dress/cover.jpg'),
 				details=[
-					Picture(title="蕾丝花边裙", image='http://assets.modeflip.com/gianni/collections/201607/garments/1/pre1.jpg'),
-					Picture(title="细节1", image='http://assets.modeflip.com/gianni/collections/201607/garments/1/details/1.jpg'),
-					Picture(title="细节2", image='http://assets.modeflip.com/gianni/collections/201607/garments/1/details/2.jpg'),
-					Picture(title="细节3", image='http://assets.modeflip.com/gianni/collections/201607/garments/1/details/3.jpg'),
-					Picture(title="细节4", image='http://assets.modeflip.com/gianni/collections/201607/garments/1/details/4.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/aglaya_dress/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/aglaya_dress/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/aglaya_dress/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/aglaya_dress/details/4.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/aglaya_dress/details/5.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/aglaya_dress/details/6.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/aglaya_dress/details/7.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/aglaya_dress/details/8.jpg'),
 						]
 				)
 
 
-g_june_2 = Garment(
+albina_dress = Garment(
 				gid=2,
 				cid=CID_1,
 				did=DID,
-				price=777,
-				shop_link='http://shop_link',
-				pic = Picture(title="蕾丝花边裙", image='http://assets.modeflip.com/gianni/collections/201607/garments/1/pre1.jpg'),
+				price=960,
+				shop_link='https://wap.koudaitong.com/v2/goods/3erpdz1g2szc3',
+				pic = Picture(title="Albina Dress - 小黑裙", image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/albina_dress/cover.jpg'),
 				details=[
-					Picture(title="无袖开衩长裙", image='http://assets.modeflip.com/gianni/collections/201607/garments/2/1s.jpg'),
-					Picture(title="细节1", image='http://assets.modeflip.com/gianni/collections/201607/garments/2/details/1.jpg'),
-					Picture(title="细节2", image='http://assets.modeflip.com/gianni/collections/201607/garments/2/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/albina_dress/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/albina_dress/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/albina_dress/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/albina_dress/details/4.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/albina_dress/details/5.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/albina_dress/details/6.jpg'),
 						]
 				)
+
+
+antonina_dress = Garment(
+				gid=3,
+				cid=CID_1,
+				did=DID,
+				price=980,
+				shop_link='https://wap.koudaitong.com/v2/goods/1yhhtnkv6fjpf',
+				pic = Picture(title="Antonina Dress - 小黑裙", image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/antonina_dress/cover.jpg'),
+				details=[
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/antonina_dress/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/antonina_dress/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/antonina_dress/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/antonina_dress/details/4.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/antonina_dress/details/5.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/antonina_dress/details/6.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/antonina_dress/details/7.jpg'),
+						]
+				)
+
 
 
 
 garments = [
-	g_july_1,
-	g_july_2,
-	g_june_1,
-	g_june_2,
+	aglaya_dress,
+	albina_dress,
+	antonina_dress,
 ]
 
 [gc.set(g) for g in garments]

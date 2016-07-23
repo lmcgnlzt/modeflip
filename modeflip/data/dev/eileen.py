@@ -144,11 +144,10 @@ print 'designer info saved'
 ############################################################################################################
 CID_1 = 1
 
-
-c_aug = Collection(
+edie_collections = Collection(
 		cid=CID_1,
 		did=DID,
-		title='八月限量主题春夏系列',
+		title='Love for Edie 系列',
 		released=datetime(2016, 7, 24),
 		# signatrue_pics=[
 		# 	'images/resources/eileen/collections/201607/signature/pics/1.jpg',
@@ -169,8 +168,37 @@ c_aug = Collection(
 		)
 
 
+CID_2 = 2
+squibees_collections = Collection(
+		cid=CID_2,
+		did=DID,
+		title='SquibeeS 系列',
+		released=datetime(2016, 7, 24),
+		# signatrue_pics=[
+		# 	'images/resources/eileen/collections/201607/signature/pics/1.jpg',
+		# 	'images/resources/eileen/collections/201607/signature/pics/2.jpg',
+		# ],
+		# signatrue_videos=[
+		# 	Video(
+		# 		thumbnail='images/resources/eileen/collections/201607/signature/videos/thumbnail.png',
+		# 		poster='images/resources/eileen/collections/201607/signature/videos/thumbnail.jpg',
+		# 		url='images/resources/eileen/collections/201607/signature/videos/MaxMara.mp4',
+		# 	)
+		# ],
+		# signatrue_musics=[
+		# 	'http://sig_music_1.com',
+		# 	'http://sig_music_2.com',
+		# ],
+		new_arrival=True,
+		)
+
+
+
+
+
 collections = [
-	c_aug,
+	edie_collections,
+	squibees_collections,
 ]
 
 [cc.set(c) for c in collections]
@@ -182,43 +210,87 @@ print 'collection info saved'
 ############################################################################################################
 
 
-g_aug_1 = Garment(
+bella_dress = Garment(
 				gid=1,
 				cid=CID_1,
 				did=DID,
-				price=888,
-				shop_link='https://wap.koudaitong.com/v2/goods/2fnvbq4tfd99f',
-				pic = Picture(title="Pippa Skirt", image='images/resources/eileen/collections/201608/garments/squibees/pippa_skirt/cover.jpg'),
+				price=799,
+				shop_link='https://wap.koudaitong.com/v2/goods/2fyy90xwhees3',
+				pic = Picture(title="Bella Dress - 小黑裙", image='images/resources/eileen/collections/edie/garments/bella_dress/cover.jpg'),
 				details=[
-					Picture(title="整体正面效果", image='images/resources/eileen/collections/201608/garments/squibees/pippa_skirt/details/1.jpg'),
-					Picture(title="整体正面效果", image='images/resources/eileen/collections/201608/garments/squibees/pippa_skirt/details/2.jpg'),
-					Picture(title="整体正面效果", image='images/resources/eileen/collections/201608/garments/squibees/pippa_skirt/details/3.jpg'),
-					Picture(title="整体正面效果", image='images/resources/eileen/collections/201608/garments/squibees/pippa_skirt/details/4.jpg'),
-					Picture(title="整体正面效果", image='images/resources/eileen/collections/201608/garments/squibees/pippa_skirt/details/5.jpg'),
-					Picture(title="整体正面效果", image='images/resources/eileen/collections/201608/garments/squibees/pippa_skirt/details/6.jpg'),
-					Picture(title="整体正面效果", image='images/resources/eileen/collections/201608/garments/squibees/pippa_skirt/details/7.jpg'),
-					Picture(title="整体正面效果", image='images/resources/eileen/collections/201608/garments/squibees/pippa_skirt/details/8.jpg'),
+					Picture(image='images/resources/eileen/collections/edie/garments/bella_dress/details/1.jpg'),
+					Picture(image='images/resources/eileen/collections/edie/garments/bella_dress/details/2.jpg'),
+					Picture(image='images/resources/eileen/collections/edie/garments/bella_dress/details/3.jpg'),
+					Picture(image='images/resources/eileen/collections/edie/garments/bella_dress/details/4.jpg'),
+					Picture(image='images/resources/eileen/collections/edie/garments/bella_dress/details/5.jpg'),
+					Picture(image='images/resources/eileen/collections/edie/garments/bella_dress/details/6.jpg'),
 						]
 				)
 
 
-# g_aug_2 = Garment(
-# 				gid=2,
-# 				cid=CID_1,
-# 				did=DID,
-# 				price=888,
-# 				shop_link='https://wap.koudaitong.com/v2/goods/3np6vyfkgazpf',
-# 				pic = Picture(title="Anna Dress", image='images/resources/eileen/collections/201608/garments/squibees/anna_dress/cover.jpg'),
-# 				details=[
-# 					Picture(title="细节1", image='images/resources/eileen/collections/201608/garments/2/details/2.jpg'),
-# 						]
-# 				)
+sophia_dress = Garment(
+				gid=2,
+				cid=CID_1,
+				did=DID,
+				price=978,
+				shop_link='https://wap.koudaitong.com/v2/goods/27cimy90r96er',
+				pic = Picture(title="Sophia Dress - 连衣裙", image='images/resources/eileen/collections/edie/garments/sophia_dress/cover.jpg'),
+				details=[
+					Picture(image='images/resources/eileen/collections/edie/garments/sophia_dress/details/1.jpg'),
+					Picture(image='images/resources/eileen/collections/edie/garments/sophia_dress/details/2.jpg'),
+					Picture(image='images/resources/eileen/collections/edie/garments/sophia_dress/details/3.jpg'),
+					Picture(image='images/resources/eileen/collections/edie/garments/sophia_dress/details/4.jpg'),
+					Picture(image='images/resources/eileen/collections/edie/garments/sophia_dress/details/5.jpg'),
+					Picture(image='images/resources/eileen/collections/edie/garments/sophia_dress/details/6.jpg'),
+						]
+				)
+
+
+anna_dress = Garment(
+				gid=3,
+				cid=CID_2,
+				did=DID,
+				price=860,
+				shop_link='https://wap.koudaitong.com/v2/goods/2fnvbq4tfd99f',
+				pic = Picture(title="Anna Dress - 连衣裙", image='images/resources/eileen/collections/squibees/garments/anna_dress/cover.jpg'),
+				details=[
+					Picture(image='images/resources/eileen/collections/squibees/garments/anna_dress/details/1.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/anna_dress/details/2.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/anna_dress/details/3.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/anna_dress/details/4.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/anna_dress/details/5.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/anna_dress/details/6.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/anna_dress/details/7.jpg'),
+						]
+				)
+
+pippa_skirt = Garment(
+				gid=4,
+				cid=CID_2,
+				did=DID,
+				price=738,
+				shop_link='https://wap.koudaitong.com/v2/goods/3np6vyfkgazpf',
+				pic = Picture(title="Pippa Skirt - 百褶裙", image='images/resources/eileen/collections/squibees/garments/pippa_skirt/cover.jpg'),
+				details=[
+					Picture(image='images/resources/eileen/collections/squibees/garments/pippa_skirt/details/1.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/pippa_skirt/details/2.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/pippa_skirt/details/3.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/pippa_skirt/details/4.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/pippa_skirt/details/5.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/pippa_skirt/details/6.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/pippa_skirt/details/7.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/pippa_skirt/details/8.jpg'),
+						]
+				)
+
 
 
 
 garments = [
-	g_aug_1,
-	# g_aug_2,
+	bella_dress,
+	sophia_dress,
+	anna_dress,
+	pippa_skirt,
 ]
 
 [gc.set(g) for g in garments]

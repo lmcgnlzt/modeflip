@@ -143,15 +143,13 @@ print 'designer info saved'
 
 
 ############################################################################################################
-CID_2 = 2
 CID_1 = 1
 
-
-c_july = Collection(
-		cid=CID_2,
+edie_collections = Collection(
+		cid=CID_1,
 		did=DID,
-		title='七月限量主题春夏系列',
-		released=datetime(2016, 7, 15),
+		title='Love for Edie 系列',
+		released=datetime(2016, 7, 24),
 		# signatrue_pics=[
 		# 	'http://assets.modeflip.com/eileen/collections/201607/signature/pics/1.jpg',
 		# 	'http://assets.modeflip.com/eileen/collections/201607/signature/pics/2.jpg',
@@ -171,30 +169,37 @@ c_july = Collection(
 		)
 
 
-c_june = Collection(
-		cid=CID_1,
+CID_2 = 2
+squibees_collections = Collection(
+		cid=CID_2,
 		did=DID,
-		title='六月限量主题春夏系列',
-		released=datetime(2016, 6, 15),
+		title='SquibeeS 系列',
+		released=datetime(2016, 7, 24),
 		# signatrue_pics=[
-		# 	'http://assets.modeflip.com/eileen/images/modeflip/collections/june/signature/1.jpg',
-		# 	'http://assets.modeflip.com/eileen/images/modeflip/collections/june/signature/2.jpg',
+		# 	'http://assets.modeflip.com/eileen/collections/201607/signature/pics/1.jpg',
+		# 	'http://assets.modeflip.com/eileen/collections/201607/signature/pics/2.jpg',
 		# ],
 		# signatrue_videos=[
-		# 	'images/modeflip/MaxMara_Spring_Summer_2011_MilanHD2.mp4',
+		# 	Video(
+		# 		thumbnail='http://assets.modeflip.com/eileen/collections/201607/signature/videos/thumbnail.png',
+		# 		poster='http://assets.modeflip.com/eileen/collections/201607/signature/videos/thumbnail.jpg',
+		# 		url='http://assets.modeflip.com/eileen/collections/201607/signature/videos/MaxMara.mp4',
+		# 	)
 		# ],
 		# signatrue_musics=[
 		# 	'http://sig_music_1.com',
 		# 	'http://sig_music_2.com',
 		# ],
-		new_arrival=False,
+		new_arrival=True,
 		)
 
 
 
+
+
 collections = [
-	c_july,
-	c_june,
+	edie_collections,
+	squibees_collections,
 ]
 
 [cc.set(c) for c in collections]
@@ -206,77 +211,87 @@ print 'collection info saved'
 ############################################################################################################
 
 
-g_july_1 = Garment(
-				gid=1,
-				cid=CID_2,
-				did=DID,
-				price=888,
-				shop_link='http://shop_link',
-				pic = Picture(title="蕾丝花边裙", image='http://assets.modeflip.com/eileen/collections/201607/garments/1/pre1.jpg'),
-				details=[
-					Picture(title="蕾丝花边裙", image='http://assets.modeflip.com/eileen/collections/201607/garments/1/pre1.jpg'),
-					Picture(title="细节1", image='http://assets.modeflip.com/eileen/collections/201607/garments/1/details/1.jpg'),
-					Picture(title="细节2", image='http://assets.modeflip.com/eileen/collections/201607/garments/1/details/2.jpg'),
-					Picture(title="细节3", image='http://assets.modeflip.com/eileen/collections/201607/garments/1/details/3.jpg'),
-					Picture(title="细节4", image='http://assets.modeflip.com/eileen/collections/201607/garments/1/details/4.jpg'),
-						]
-				)
-
-
-g_july_2 = Garment(
-				gid=2,
-				cid=CID_2,
-				did=DID,
-				price=888,
-				shop_link='http://shop_link',
-				pic = Picture(title="蕾丝花边裙", image='http://assets.modeflip.com/eileen/collections/201607/garments/1/pre1.jpg'),
-				details=[
-					Picture(title="无袖开衩长裙", image='http://assets.modeflip.com/eileen/collections/201607/garments/2/1s.jpg'),
-					Picture(title="细节1", image='http://assets.modeflip.com/eileen/collections/201607/garments/2/details/1.jpg'),
-					Picture(title="细节2", image='http://assets.modeflip.com/eileen/collections/201607/garments/2/details/2.jpg'),
-						]
-				)
-
-
-
-g_june_1 = Garment(
+bella_dress = Garment(
 				gid=1,
 				cid=CID_1,
 				did=DID,
-				price=777,
-				shop_link='http://shop_link',
-				pic = Picture(title="蕾丝花边裙", image='http://assets.modeflip.com/eileen/collections/201607/garments/1/pre1.jpg'),
+				price=799,
+				shop_link='https://wap.koudaitong.com/v2/goods/2fyy90xwhees3',
+				pic = Picture(title="Bella Dress - 小黑裙", image='http://assets.modeflip.com/eileen/collections/edie/garments/bella_dress/cover.jpg'),
 				details=[
-					Picture(title="蕾丝花边裙", image='http://assets.modeflip.com/eileen/collections/201607/garments/1/pre1.jpg'),
-					Picture(title="细节1", image='http://assets.modeflip.com/eileen/collections/201607/garments/1/details/1.jpg'),
-					Picture(title="细节2", image='http://assets.modeflip.com/eileen/collections/201607/garments/1/details/2.jpg'),
-					Picture(title="细节3", image='http://assets.modeflip.com/eileen/collections/201607/garments/1/details/3.jpg'),
-					Picture(title="细节4", image='http://assets.modeflip.com/eileen/collections/201607/garments/1/details/4.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/bella_dress/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/bella_dress/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/bella_dress/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/bella_dress/details/4.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/bella_dress/details/5.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/bella_dress/details/6.jpg'),
 						]
 				)
 
 
-g_june_2 = Garment(
+sophia_dress = Garment(
 				gid=2,
 				cid=CID_1,
 				did=DID,
-				price=777,
-				shop_link='http://shop_link',
-				pic = Picture(title="蕾丝花边裙", image='http://assets.modeflip.com/eileen/collections/201607/garments/1/pre1.jpg'),
+				price=978,
+				shop_link='https://wap.koudaitong.com/v2/goods/27cimy90r96er',
+				pic = Picture(title="Sophia Dress - 连衣裙", image='http://assets.modeflip.com/eileen/collections/edie/garments/sophia_dress/cover.jpg'),
 				details=[
-					Picture(title="无袖开衩长裙", image='http://assets.modeflip.com/eileen/collections/201607/garments/2/1s.jpg'),
-					Picture(title="细节1", image='http://assets.modeflip.com/eileen/collections/201607/garments/2/details/1.jpg'),
-					Picture(title="细节2", image='http://assets.modeflip.com/eileen/collections/201607/garments/2/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/sophia_dress/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/sophia_dress/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/sophia_dress/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/sophia_dress/details/4.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/sophia_dress/details/5.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/sophia_dress/details/6.jpg'),
 						]
 				)
+
+
+anna_dress = Garment(
+				gid=3,
+				cid=CID_2,
+				did=DID,
+				price=860,
+				shop_link='https://wap.koudaitong.com/v2/goods/2fnvbq4tfd99f',
+				pic = Picture(title="Anna Dress - 连衣裙", image='http://assets.modeflip.com/eileen/collections/squibees/garments/anna_dress/cover.jpg'),
+				details=[
+					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/anna_dress/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/anna_dress/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/anna_dress/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/anna_dress/details/4.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/anna_dress/details/5.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/anna_dress/details/6.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/anna_dress/details/7.jpg'),
+						]
+				)
+
+pippa_skirt = Garment(
+				gid=4,
+				cid=CID_2,
+				did=DID,
+				price=738,
+				shop_link='https://wap.koudaitong.com/v2/goods/3np6vyfkgazpf',
+				pic = Picture(title="Pippa Skirt - 百褶裙", image='http://assets.modeflip.com/eileen/collections/squibees/garments/pippa_skirt/cover.jpg'),
+				details=[
+					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/pippa_skirt/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/pippa_skirt/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/pippa_skirt/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/pippa_skirt/details/4.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/pippa_skirt/details/5.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/pippa_skirt/details/6.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/pippa_skirt/details/7.jpg'),
+					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/pippa_skirt/details/8.jpg'),
+						]
+				)
+
 
 
 
 garments = [
-	g_july_1,
-	g_july_2,
-	g_june_1,
-	g_june_2,
+	bella_dress,
+	sophia_dress,
+	anna_dress,
+	pippa_skirt,
 ]
 
 [gc.set(g) for g in garments]
