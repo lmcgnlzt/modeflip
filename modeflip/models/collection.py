@@ -11,6 +11,7 @@ class Collection(Object):
 	cid = Integer(nullable=False)
 	did = Integer(nullable=False)
 	title = String()
+	desc = String()
 	released = DateTime(nullable=False)
 	signatrue_pics = List(value=String(), validator=lambda x: all('/' in i for i in x))
 	signatrue_videos = List(value=EmbeddedObject(Video))
