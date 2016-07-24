@@ -82,7 +82,7 @@ exclusive_content = ExclusiveContent(
 
 
 pre_mkt_content = PreMarketContent(
-		target_date='July 24, 2016 12:00:01',
+		target_date='July 25, 2016 10:00:01',
 		target_pic='http://assets.modeflip.com/sophia/premarket/soon.jpg',
 		)
 
