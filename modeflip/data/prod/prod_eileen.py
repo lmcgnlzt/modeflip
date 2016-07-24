@@ -226,6 +226,7 @@ bella_dress = Garment(
 				shop_link='https://wap.koudaitong.com/v2/goods/2fyy90xwhees3',
 				pic = Picture(title="Bella Dress - 小黑裙", image='http://assets.modeflip.com/eileen/collections/edie/garments/bella_dress/cover.jpg'),
 				details=[
+					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/bella_dress/details/0.jpg'),
 					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/bella_dress/details/1.jpg'),
 					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/bella_dress/details/2.jpg'),
 					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/bella_dress/details/3.jpg'),
@@ -244,6 +245,7 @@ sophia_dress = Garment(
 				shop_link='https://wap.koudaitong.com/v2/goods/27cimy90r96er',
 				pic = Picture(title="Sophia Dress - 连衣裙", image='http://assets.modeflip.com/eileen/collections/edie/garments/sophia_dress/cover.jpg'),
 				details=[
+					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/sophia_dress/details/0.jpg'),
 					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/sophia_dress/details/1.jpg'),
 					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/sophia_dress/details/2.jpg'),
 					Picture(image='http://assets.modeflip.com/eileen/collections/edie/garments/sophia_dress/details/3.jpg'),
@@ -262,6 +264,7 @@ anna_dress = Garment(
 				shop_link='https://wap.koudaitong.com/v2/goods/2fnvbq4tfd99f',
 				pic = Picture(title="Anna Dress - 连衣裙", image='http://assets.modeflip.com/eileen/collections/squibees/garments/anna_dress/cover.jpg'),
 				details=[
+					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/anna_dress/details/0.jpg'),
 					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/anna_dress/details/1.jpg'),
 					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/anna_dress/details/2.jpg'),
 					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/anna_dress/details/3.jpg'),
@@ -280,6 +283,7 @@ pippa_skirt = Garment(
 				shop_link='https://wap.koudaitong.com/v2/goods/3np6vyfkgazpf',
 				pic = Picture(title="Pippa Skirt - 百褶裙", image='http://assets.modeflip.com/eileen/collections/squibees/garments/pippa_skirt/cover.jpg'),
 				details=[
+					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/pippa_skirt/details/0.jpg'),
 					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/pippa_skirt/details/1.jpg'),
 					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/pippa_skirt/details/2.jpg'),
 					Picture(image='http://assets.modeflip.com/eileen/collections/squibees/garments/pippa_skirt/details/3.jpg'),

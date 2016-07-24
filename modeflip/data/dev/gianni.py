@@ -193,6 +193,7 @@ aglaya_dress = Garment(
 				shop_link='https://wap.koudaitong.com/v2/goods/362t31f5jo1ab',
 				pic = Picture(title="Aglaya Dress - 小黑裙", image='images/resources/gianni/collections/littleblackdress/garments/aglaya_dress/cover.jpg'),
 				details=[
+					Picture(image='images/resources/gianni/collections/littleblackdress/garments/aglaya_dress/details/0.jpg'),
 					Picture(image='images/resources/gianni/collections/littleblackdress/garments/aglaya_dress/details/1.jpg'),
 					Picture(image='images/resources/gianni/collections/littleblackdress/garments/aglaya_dress/details/2.jpg'),
 					Picture(image='images/resources/gianni/collections/littleblackdress/garments/aglaya_dress/details/3.jpg'),
@@ -213,6 +214,7 @@ albina_dress = Garment(
 				shop_link='https://wap.koudaitong.com/v2/goods/3erpdz1g2szc3',
 				pic = Picture(title="Albina Dress - 小黑裙", image='images/resources/gianni/collections/littleblackdress/garments/albina_dress/cover.jpg'),
 				details=[
+					Picture(image='images/resources/gianni/collections/littleblackdress/garments/albina_dress/details/0.jpg'),
 					Picture(image='images/resources/gianni/collections/littleblackdress/garments/albina_dress/details/1.jpg'),
 					Picture(image='images/resources/gianni/collections/littleblackdress/garments/albina_dress/details/2.jpg'),
 					Picture(image='images/resources/gianni/collections/littleblackdress/garments/albina_dress/details/3.jpg'),
@@ -231,6 +233,7 @@ antonina_dress = Garment(
 				shop_link='https://wap.koudaitong.com/v2/goods/1yhhtnkv6fjpf',
 				pic = Picture(title="Antonina Dress - 小黑裙", image='images/resources/gianni/collections/littleblackdress/garments/antonina_dress/cover.jpg'),
 				details=[
+					Picture(image='images/resources/gianni/collections/littleblackdress/garments/antonina_dress/details/0.jpg'),
 					Picture(image='images/resources/gianni/collections/littleblackdress/garments/antonina_dress/details/1.jpg'),
 					Picture(image='images/resources/gianni/collections/littleblackdress/garments/antonina_dress/details/2.jpg'),
 					Picture(image='images/resources/gianni/collections/littleblackdress/garments/antonina_dress/details/3.jpg'),
