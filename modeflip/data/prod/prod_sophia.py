@@ -202,6 +202,8 @@ fiona_pants = Garment(
 					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants/details/6.jpg'),
 					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants/details/7.jpg'),
 					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants/details/8.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants/details/9.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants/details/10.jpg'),
 						]
 				)
 
