@@ -125,7 +125,7 @@ d = Designer(
 		name='Sophia Tezel',
 		profile_images=profile_images,
 		is_active=True,
-		on_market=False,
+		on_market=True,
 		origin='NEW YORK',
 		intro=intro,
 		bio=bio,
@@ -147,15 +147,16 @@ print 'designer info saved'
 CID_1 = 1
 
 
-c_aug = Collection(
+sophia_collections = Collection(
 		cid=CID_1,
 		did=DID,
-		title='八月限量主题春夏系列',
-		released=datetime(2016, 7, 24),
-		# signatrue_pics=[
-		# 	'http://assets.modeflip.com/sophia/collections/201607/signature/pics/1.jpg',
-		# 	'http://assets.modeflip.com/sophia/collections/201607/signature/pics/2.jpg',
-		# ],
+		title='SOPHIA COLLECTIONS 系列',
+		desc='作为好莱坞女星最爱的设计师之一，Sophia的设计总是受到好莱坞明星和歌手的青睐，包括Taylor Swift,暮光之城女主角Christine Stewart、纽约第一社交名媛Olivia Palermo（gossip girl现实版）、Sex and the City女主角Sarah Jessica Parker、维密天使Miranda Kerr等等。',
+		released=datetime(2016, 7, 25),
+		signatrue_pics=[
+			'http://assets.modeflip.com/sophia/collections/sophiacollections/signature/pics/1.jpg',
+			'http://assets.modeflip.com/sophia/collections/sophiacollections/signature/pics/2.jpg',
+		],
 		# signatrue_videos=[
 		# 	Video(
 		# 		thumbnail='http://assets.modeflip.com/sophia/collections/201607/signature/videos/thumbnail.png',
@@ -172,7 +173,7 @@ c_aug = Collection(
 
 
 collections = [
-	c_aug,
+	sophia_collections,
 ]
 
 [cc.set(c) for c in collections]
@@ -184,45 +185,51 @@ print 'collection info saved'
 ############################################################################################################
 
 
-g_aug_1 = Garment(
+fiona_pants = Garment(
 				gid=1,
 				cid=CID_1,
 				did=DID,
-				price=888,
-				shop_link='https://wap.koudaitong.com/v2/goods/2fnvbq4tfd99f',
-				pic = Picture(title="白色黑色蕾丝衬衫", image='http://assets.modeflip.com/sophia/collections/201608/garments/1/cover.jpg'),
+				price=735,
+				shop_link='https://wap.koudaitong.com/v2/goods/277ly787ymf1v',
+				pic = Picture(title="Fiona Pants - 阔腿裤", image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants/cover.jpg'),
 				details=[
-					Picture(title="整体正面效果", image='http://assets.modeflip.com/sophia/collections/201608/garments/1/details/4.jpg'),
-					Picture(title="细节1", image='http://assets.modeflip.com/sophia/collections/201608/garments/1/details/5.jpg'),
-					Picture(title="细节2", image='http://assets.modeflip.com/sophia/collections/201608/garments/1/details/6.jpg'),
-					Picture(title="细节3", image='http://assets.modeflip.com/sophia/collections/201608/garments/1/details/7.jpg'),
-					Picture(title="细节4", image='http://assets.modeflip.com/sophia/collections/201608/garments/1/details/8.jpg'),
-					Picture(title="细节4", image='http://assets.modeflip.com/sophia/collections/201608/garments/1/details/9.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants/details/0.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants/details/4.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants/details/5.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants/details/6.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants/details/7.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants/details/8.jpg'),
 						]
 				)
 
 
-g_aug_2 = Garment(
+diana_top = Garment(
 				gid=2,
 				cid=CID_1,
 				did=DID,
-				price=888,
-				shop_link='https://wap.koudaitong.com/v2/goods/3np6vyfkgazpf',
-				pic = Picture(title="黑色蕾丝衬衫", image='http://assets.modeflip.com/sophia/collections/201608/garments/2/cover.jpg'),
+				price=813,
+				shop_link='https://wap.koudaitong.com/v2/goods/3f0arh7vkfqeb',
+				pic = Picture(title="Diana Top - 蕾丝上衣", image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/diana_top/cover.jpg'),
 				details=[
-					Picture(title="细节1", image='http://assets.modeflip.com/sophia/collections/201608/garments/2/details/2.jpg'),
-					Picture(title="细节2", image='http://assets.modeflip.com/sophia/collections/201608/garments/2/details/3.jpg'),
-					Picture(title="细节3", image='http://assets.modeflip.com/sophia/collections/201608/garments/2/details/4.jpg'),
-					Picture(title="细节4", image='http://assets.modeflip.com/sophia/collections/201608/garments/2/details/5.jpg'),
-					Picture(title="细节5", image='http://assets.modeflip.com/sophia/collections/201608/garments/2/details/6.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/diana_top/details/0.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/diana_top/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/diana_top/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/diana_top/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/diana_top/details/4.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/diana_top/details/5.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/diana_top/details/6.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/diana_top/details/7.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/diana_top/details/8.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/diana_top/details/9.jpg'),
 						]
 				)
 
-
-
 garments = [
-	g_aug_1,
-	g_aug_2,
+	fiona_pants,
+	diana_top,
 ]
 
 [gc.set(g) for g in garments]
