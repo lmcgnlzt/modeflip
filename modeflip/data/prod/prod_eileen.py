@@ -46,12 +46,12 @@ profile_images = ProfileImages(
 		background_url='http://assets.modeflip.com/eileen/icon/background.jpg',
 	)
 
+thumbnails_ids = [1, 14, 3, 13, 5, 4, 15, 16]
+thumbnails = ['http://assets.modeflip.com/eileen/experience/thumbnails/{}s.jpg'.format(i) for i in thumbnails_ids]
+
 ids = ['0', '1', '3', '4', '5', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '50', '51', '52']
-pics = [Picture(thumbnail='http://assets.modeflip.com/eileen/experience/pics/{}s.jpg'.format(i), image='http://assets.modeflip.com/eileen/experience/pics/{}.jpg'.format(i)) for i in ids]
-
-sig_pics_ids = [1, 14, 3, 13, 5, 4, 15, 16, 17, 18, 19, 20, 21, 22, 23, 52]
-sig_pics = [Picture(thumbnail='http://assets.modeflip.com/eileen/experience/pics/{}s.jpg'.format(i), image='http://assets.modeflip.com/eileen/experience/pics/{}.jpg'.format(i)) for i in sig_pics_ids]
-
+pics = [Picture(thumbnail='http://assets.modeflip.com/eileen/experience/pics/{}s.jpg'.format(i), image='http://assets.modeflip.com/eileen/experience/pics/{}.jpg'.format(i)) for i in thumbnails_ids ]
+[pics.append(Picture(thumbnail='http://assets.modeflip.com/eileen/experience/pics/{}s.jpg'.format(i), image='http://assets.modeflip.com/eileen/experience/pics/{}.jpg'.format(i))) for i in ids if i not in thumbnails_ids]
 
 experience_content = ExperienceContent(
 	brands=[
@@ -60,63 +60,62 @@ experience_content = ExperienceContent(
 		'http://assets.modeflip.com/eileen/experience/brand/squibees.jpg',
 		'http://assets.modeflip.com/eileen/experience/brand/trump.jpg',
 		],
-	sig_pics = sig_pics,
-	pics = pics,
-	videos=[
-		Video(
-				thumbnail='http://assets.modeflip.com/eileen/experience/videos/thumbnail.png',
-				poster='http://assets.modeflip.com/eileen/experience/videos/thumbnail.jpg',
-				url='http://assets.modeflip.com/eileen/experience/videos/MaxMara.mp4',
-			)
-		]
+	thumbnails=thumbnails,
+	pics=pics,
+	# videos=[
+	# 	Video(
+	# 			thumbnail='http://assets.modeflip.com/eileen/experience/videos/thumbnail.png',
+	# 			poster='http://assets.modeflip.com/eileen/experience/videos/thumbnail.jpg',
+	# 			url='http://assets.modeflip.com/eileen/experience/videos/MaxMara.mp4',
+	# 		)
+	# 	]
 	)
 
 
 exclusive_content = ExclusiveContent(
-	title='独家签约 -- Exclusive Collections',
 	pics=[
 		'http://assets.modeflip.com/eileen/exclusive/pics/1.jpg',
 		],
 	)
 
 
-pre_mkt_content = PreMarketContent(
-		target_date='July 24, 2016 12:00:01',
-		target_pic='http://assets.modeflip.com/eileen/premarket/soon.jpg',
-		)
+# pre_mkt_content = PreMarketContent(
+# 		target_date='July 24, 2016 12:00:01',
+# 		target_pic='http://assets.modeflip.com/eileen/premarket/soon.jpg',
+# 		)
 
 
-signatrue_products = [
-	SignatrueProduct(
-			picture='http://assets.modeflip.com/eileen/product/1.jpg',
-			title='设计师环保活页笔记本夹',
-			subtitle='标志产品',
-			desc='这是一段关于活页笔记本夹的简要介绍，字体可以调整',
-			shop_link='http://notebook_shop_link',
-		),
-	SignatrueProduct(
-			picture='http://assets.modeflip.com/eileen/product/2.jpg',
-			title='A5 设计师独家设计卡',
-			# subtitle='Signature Product',
-			# desc='This is an awesome notebook, you will love it',
-			shop_link='http://notebook_shop_link',
-		),
-	]
+# signatrue_products = [
+# 	SignatrueProduct(
+# 			picture='http://assets.modeflip.com/eileen/product/1.jpg',
+# 			title='设计师环保活页笔记本夹',
+# 			subtitle='标志产品',
+# 			desc='这是一段关于活页笔记本夹的简要介绍，字体可以调整',
+# 			shop_link='http://notebook_shop_link',
+# 		),
+# 	SignatrueProduct(
+# 			picture='http://assets.modeflip.com/eileen/product/2.jpg',
+# 			title='A5 设计师独家设计卡',
+# 			# subtitle='Signature Product',
+# 			# desc='This is an awesome notebook, you will love it',
+# 			shop_link='http://notebook_shop_link',
+# 		),
+# 	]
 
-private_musics = [
-	PrivateMusic(
-		music_icon='http://music_icon_1.com',
-		title='Ugly Is Beautiful',
-		author='David Usher',
-		link='http://private_music_1.com'
-		),
-	PrivateMusic(
-		music_icon='http://music_icon_2.com',
-		title='Beautiful Is Ugly',
-		author='Usher David',
-		link='http://private_music_2.com'
-		),
-	]
+# private_musics = [
+# 	PrivateMusic(
+# 		music_icon='http://music_icon_1.com',
+# 		title='Ugly Is Beautiful',
+# 		author='David Usher',
+# 		link='http://private_music_1.com'
+# 		),
+# 	PrivateMusic(
+# 		music_icon='http://music_icon_2.com',
+# 		title='Beautiful Is Ugly',
+# 		author='Usher David',
+# 		link='http://private_music_2.com'
+# 		),
+# 	]
 
 
 d = Designer(
@@ -130,9 +129,9 @@ d = Designer(
 		bio=bio,
 		experience_content=experience_content,
 		exclusive_content=exclusive_content,
-		pre_mkt_content=pre_mkt_content,
-		signatrue_products=signatrue_products,
-		private_musics=private_musics,
+		# pre_mkt_content=pre_mkt_content,
+		# signatrue_products=signatrue_products,
+		# private_musics=private_musics,
 		)
 
 

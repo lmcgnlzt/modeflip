@@ -42,6 +42,9 @@ class CollectionConfig(object):
 		doc = self.collection.find_one({'did': did, 'cid': cid}, {'_id': 0})
 		return Collection(**doc) if doc else None
 
+	def get_all_ids(self, did):
+		return [c['cid'] for c in self.collection.find({'did': did}, {'_id':0, 'cid':1}).sort('cid', 1)]
+
 	def get_all_collections_by_designer(self, did):
 		return [Collection(**doc) for doc in self.collection.find({'did': did}, {'_id': 0}).sort('released', -1)]
 

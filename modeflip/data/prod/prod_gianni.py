@@ -46,11 +46,12 @@ profile_images = ProfileImages(
 		background_url='http://assets.modeflip.com/gianni/icon/background.jpg',
 	)
 
-ids = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '25', '26', '27', '28', '29', '30', '31', '32', '33', '35', '36', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '63', '64', '65', '66', '68', '70', '71', '72', '73']
-pics = [Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/{}s.jpg'.format(i), image='http://assets.modeflip.com/gianni/experience/pics/{}.jpg'.format(i)) for i in ids]
+thumbnails_ids = [4, 49, 5, 3, 2, 11, 54, 8]
+thumbnails = ['http://assets.modeflip.com/gianni/experience/thumbnails/{}s.jpg'.format(i) for i in thumbnails_ids]
 
-sig_pics_ids = [4, 49, 5, 3, 2, 11, 54, 8, 40, 1, 9, 36, 48, 52, 12, 44]
-sig_pics = [Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/{}s.jpg'.format(i), image='http://assets.modeflip.com/gianni/experience/pics/{}.jpg'.format(i)) for i in sig_pics_ids]
+ids = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '25', '26', '27', '28', '29', '30', '31', '32', '33', '35', '36', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '63', '64', '65', '66', '68', '70', '71', '72', '73']
+pics = [Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/{}s.jpg'.format(i), image='http://assets.modeflip.com/gianni/experience/pics/{}.jpg'.format(i)) for i in thumbnails_ids ]
+[pics.append(Picture(thumbnail='http://assets.modeflip.com/gianni/experience/pics/{}s.jpg'.format(i), image='http://assets.modeflip.com/gianni/experience/pics/{}.jpg'.format(i))) for i in ids if i not in thumbnails_ids]
 
 
 experience_content = ExperienceContent(
@@ -60,63 +61,62 @@ experience_content = ExperienceContent(
 		'http://assets.modeflip.com/gianni/experience/brand/dkny.jpg',
 		'http://assets.modeflip.com/gianni/experience/brand/gianni.jpg',
 		],
-	sig_pics = sig_pics,
-	pics = pics,
-	videos=[
-		Video(
-				thumbnail='http://assets.modeflip.com/gianni/experience/videos/thumbnail.png',
-				poster='http://assets.modeflip.com/gianni/experience/videos/thumbnail.jpg',
-				url='http://assets.modeflip.com/gianni/experience/videos/MaxMara.mp4',
-			)
-		]
+	thumbnails=thumbnails,
+	pics=pics,
+	# videos=[
+	# 	Video(
+	# 			thumbnail='http://assets.modeflip.com/gianni/experience/videos/thumbnail.png',
+	# 			poster='http://assets.modeflip.com/gianni/experience/videos/thumbnail.jpg',
+	# 			url='http://assets.modeflip.com/gianni/experience/videos/MaxMara.mp4',
+	# 		)
+	# 	]
 	)
 
 
 exclusive_content = ExclusiveContent(
-	title='独家签约 -- Exclusive Collections',
 	pics=[
 		'http://assets.modeflip.com/gianni/exclusive/pics/1.jpg',
 		],
 	)
 
 
-pre_mkt_content = PreMarketContent(
-		target_date='July 30, 2016 12:00:01',
-		target_pic='http://assets.modeflip.com/gianni/premarket/soon.jpg',
-		)
+# pre_mkt_content = PreMarketContent(
+# 		target_date='July 30, 2016 12:00:01',
+# 		target_pic='http://assets.modeflip.com/gianni/premarket/soon.jpg',
+# 		)
 
 
-signatrue_products = [
-	SignatrueProduct(
-			picture='http://assets.modeflip.com/gianni/product/1.jpg',
-			title='设计师环保活页笔记本夹',
-			subtitle='标志产品',
-			desc='这是一段关于活页笔记本夹的简要介绍，字体可以调整',
-			shop_link='http://notebook_shop_link',
-		),
-	SignatrueProduct(
-			picture='http://assets.modeflip.com/gianni/product/2.jpg',
-			title='A5 设计师独家设计卡',
-			# subtitle='Signature Product',
-			# desc='This is an awesome notebook, you will love it',
-			shop_link='http://notebook_shop_link',
-		),
-	]
+# signatrue_products = [
+# 	SignatrueProduct(
+# 			picture='http://assets.modeflip.com/gianni/product/1.jpg',
+# 			title='设计师环保活页笔记本夹',
+# 			subtitle='标志产品',
+# 			desc='这是一段关于活页笔记本夹的简要介绍，字体可以调整',
+# 			shop_link='http://notebook_shop_link',
+# 		),
+# 	SignatrueProduct(
+# 			picture='http://assets.modeflip.com/gianni/product/2.jpg',
+# 			title='A5 设计师独家设计卡',
+# 			# subtitle='Signature Product',
+# 			# desc='This is an awesome notebook, you will love it',
+# 			shop_link='http://notebook_shop_link',
+# 		),
+# 	]
 
-private_musics = [
-	PrivateMusic(
-		music_icon='http://music_icon_1.com',
-		title='Ugly Is Beautiful',
-		author='David Usher',
-		link='http://private_music_1.com'
-		),
-	PrivateMusic(
-		music_icon='http://music_icon_2.com',
-		title='Beautiful Is Ugly',
-		author='Usher David',
-		link='http://private_music_2.com'
-		),
-	]
+# private_musics = [
+# 	PrivateMusic(
+# 		music_icon='http://music_icon_1.com',
+# 		title='Ugly Is Beautiful',
+# 		author='David Usher',
+# 		link='http://private_music_1.com'
+# 		),
+# 	PrivateMusic(
+# 		music_icon='http://music_icon_2.com',
+# 		title='Beautiful Is Ugly',
+# 		author='Usher David',
+# 		link='http://private_music_2.com'
+# 		),
+# 	]
 
 
 d = Designer(
@@ -130,9 +130,9 @@ d = Designer(
 		bio=bio,
 		experience_content=experience_content,
 		exclusive_content=exclusive_content,
-		pre_mkt_content=pre_mkt_content,
-		signatrue_products=signatrue_products,
-		private_musics=private_musics,
+		# pre_mkt_content=pre_mkt_content,
+		# signatrue_products=signatrue_products,
+		# private_musics=private_musics,
 		)
 
 
