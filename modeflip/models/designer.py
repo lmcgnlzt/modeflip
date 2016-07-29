@@ -9,9 +9,8 @@ from modeflip.models.statistics import Statistics
 
 class ExperienceContent(Object):
 	brands = List(value=String(), validator=lambda x: all('/' in i for i in x))
-	sig_pics = List(value=EmbeddedObject(Picture)) # seletive pictures <= 24
+	thumbnails = List(value=String(), validator=lambda x: all('/' in i for i in x))
 	pics = List(value=EmbeddedObject(Picture)) # all pictures
-	videos = List(value=EmbeddedObject(Video))
 
 
 class ExclusiveContent(Object):

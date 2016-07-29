@@ -46,11 +46,12 @@ profile_images = ProfileImages(
 		background_url='images/resources/gianni/icon/background.jpg',
 	)
 
-pics = [Picture(thumbnail='images/resources/gianni/experience/pics/{}s.jpg'.format(i), image='images/resources/gianni/experience/pics/{}.jpg'.format(i)) for i in range(0, 74) if os.path.isfile('/Users/mli/modeapp/modeapp/static/images/resources/gianni/experience/pics/{}s.jpg'.format(i))]
+thumbnails_ids = [4, 49, 5, 3, 2, 11, 54, 8]
+thumbnails = ['images/resources/gianni/experience/thumbnails/{}s.jpg'.format(i) for i in thumbnails_ids if os.path.isfile('/Users/mli/modeapp/modeapp/static/images/resources/gianni/experience/thumbnails/{}s.jpg'.format(i))]
 
-sig_pics_ids = [4, 49, 5, 3, 2, 11, 54, 8, 40, 1, 9, 36, 48, 52, 12, 44]
-sig_pics = [Picture(thumbnail='images/resources/gianni/experience/pics/{}s.jpg'.format(i), image='images/resources/gianni/experience/pics/{}.jpg'.format(i)) for i in sig_pics_ids if os.path.isfile('/Users/mli/modeapp/modeapp/static/images/resources/gianni/experience/pics/{}s.jpg'.format(i))]
-
+ids = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '25', '26', '27', '28', '29', '30', '31', '32', '33', '35', '36', '38', '39', '40', '41', '42', '43', '44', '45', '46', '47', '48', '49', '50', '51', '52', '53', '54', '55', '56', '57', '58', '59', '60', '61', '63', '64', '65', '66', '68', '70', '71', '72', '73']
+pics = [Picture(thumbnail='images/resources/gianni/experience/pics/{}s.jpg'.format(i), image='images/resources/gianni/experience/pics/{}.jpg'.format(i)) for i in thumbnails_ids ]
+[pics.append(Picture(thumbnail='images/resources/gianni/experience/pics/{}s.jpg'.format(i), image='images/resources/gianni/experience/pics/{}.jpg'.format(i))) for i in ids if i not in thumbnails_ids]
 
 experience_content = ExperienceContent(
 	brands=[
@@ -59,63 +60,62 @@ experience_content = ExperienceContent(
 		'images/resources/gianni/experience/brand/dkny.jpg',
 		'images/resources/gianni/experience/brand/gianni.jpg',
 		],
-	sig_pics = sig_pics,
-	pics = pics,
-	videos=[
-		Video(
-				thumbnail='images/resources/gianni/experience/videos/thumbnail.png',
-				poster='images/resources/gianni/experience/videos/thumbnail.jpg',
-				url='images/resources/gianni/experience/videos/MaxMara.mp4',
-			)
-		]
+	thumbnails=thumbnails,
+	pics=pics,
+	# videos=[
+	# 	Video(
+	# 			thumbnail='images/resources/gianni/experience/videos/thumbnail.png',
+	# 			poster='images/resources/gianni/experience/videos/thumbnail.jpg',
+	# 			url='images/resources/gianni/experience/videos/MaxMara.mp4',
+	# 		)
+	# 	]
 	)
 
 
 exclusive_content = ExclusiveContent(
-	title='独家签约 -- Exclusive Collections',
 	pics=[
 		'images/resources/gianni/exclusive/pics/1.jpg',
 		],
 	)
 
 
-pre_mkt_content = PreMarketContent(
-		target_date='July 30, 2016 12:00:01',
-		target_pic='images/resources/gianni/premarket/soon.jpg',
-		)
+# pre_mkt_content = PreMarketContent(
+# 		target_date='July 30, 2016 12:00:01',
+# 		target_pic='images/resources/gianni/premarket/soon.jpg',
+# 		)
 
 
-signatrue_products = [
-	SignatrueProduct(
-			picture='images/resources/gianni/product/1.jpg',
-			title='设计师环保活页笔记本夹',
-			subtitle='标志产品',
-			desc='这是一段关于活页笔记本夹的简要介绍，字体可以调整',
-			shop_link='http://notebook_shop_link',
-		),
-	SignatrueProduct(
-			picture='images/resources/gianni/product/2.jpg',
-			title='A5 设计师独家设计卡',
-			# subtitle='Signature Product',
-			# desc='This is an awesome notebook, you will love it',
-			shop_link='http://notebook_shop_link',
-		),
-	]
+# signatrue_products = [
+# 	SignatrueProduct(
+# 			picture='images/resources/gianni/product/1.jpg',
+# 			title='设计师环保活页笔记本夹',
+# 			subtitle='标志产品',
+# 			desc='这是一段关于活页笔记本夹的简要介绍，字体可以调整',
+# 			shop_link='http://notebook_shop_link',
+# 		),
+# 	SignatrueProduct(
+# 			picture='images/resources/gianni/product/2.jpg',
+# 			title='A5 设计师独家设计卡',
+# 			# subtitle='Signature Product',
+# 			# desc='This is an awesome notebook, you will love it',
+# 			shop_link='http://notebook_shop_link',
+# 		),
+# 	]
 
-private_musics = [
-	PrivateMusic(
-		music_icon='http://music_icon_1.com',
-		title='Ugly Is Beautiful',
-		author='David Usher',
-		link='http://private_music_1.com'
-		),
-	PrivateMusic(
-		music_icon='http://music_icon_2.com',
-		title='Beautiful Is Ugly',
-		author='Usher David',
-		link='http://private_music_2.com'
-		),
-	]
+# private_musics = [
+# 	PrivateMusic(
+# 		music_icon='http://music_icon_1.com',
+# 		title='Ugly Is Beautiful',
+# 		author='David Usher',
+# 		link='http://private_music_1.com'
+# 		),
+# 	PrivateMusic(
+# 		music_icon='http://music_icon_2.com',
+# 		title='Beautiful Is Ugly',
+# 		author='Usher David',
+# 		link='http://private_music_2.com'
+# 		),
+# 	]
 
 
 d = Designer(
@@ -129,9 +129,9 @@ d = Designer(
 		bio=bio,
 		experience_content=experience_content,
 		exclusive_content=exclusive_content,
-		pre_mkt_content=pre_mkt_content,
-		signatrue_products=signatrue_products,
-		private_musics=private_musics,
+		# pre_mkt_content=pre_mkt_content,
+		# signatrue_products=signatrue_products,
+		# private_musics=private_musics,
 		)
 
 

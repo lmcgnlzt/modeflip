@@ -29,6 +29,9 @@ class GarmentConfig(object):
 		doc = self.collection.find_one({'did': did, 'cid': cid, 'gid': gid}, {'_id': 0})
 		return Garment(**doc) if doc else None
 
+	def get_all_ids(self, did, cid):
+		return [c['gid'] for c in self.collection.find({'did': did, 'cid': cid}, {'_id':0, 'gid':1}).sort('gid', 1)]
+
 	def get_all_garments_by_designer_collection(self, did, cid):
 		return [Garment(**doc) for doc in self.collection.find({'did': did, 'cid': cid}, {'_id': 0})]
 
