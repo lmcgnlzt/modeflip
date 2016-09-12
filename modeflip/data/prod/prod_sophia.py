@@ -149,7 +149,7 @@ CID_1 = 1
 sophia_collections = Collection(
 		cid=CID_1,
 		did=DID,
-		title='SOPHIA TEZEL 系列',
+		title='SOPHIA TEZEL',
 		desc='作为好莱坞女星最爱的设计师之一，Sophia的设计总是受到好莱坞明星和歌手的青睐，包括Taylor Swift,暮光之城女主角Christine Stewart、纽约第一社交名媛Olivia Palermo（gossip girl现实版）、Sex and the City女主角Sarah Jessica Parker、维密天使Miranda Kerr等等。',
 		released=datetime(2016, 7, 25),
 		signatrue_pics=[
@@ -228,9 +228,224 @@ diana_top = Garment(
 						]
 				)
 
+
+anne_skirt = Garment(
+				gid=3,
+				cid=CID_1,
+				did=DID,
+				price=780,
+				shop_link='https://wap.koudaitong.com/v2/goods/3enymaetx4k4j',
+				pic = Picture(title="Anne Skirt - 百褶裙", image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/anne_skirt/cover.jpg'),
+				details=[
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/anne_skirt/details/0.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/anne_skirt/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/anne_skirt/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/anne_skirt/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/anne_skirt/details/4.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/anne_skirt/details/5.jpg'),
+						]
+				)
+
+
+corrine_shirt_black = Garment(
+				gid=4,
+				cid=CID_1,
+				did=DID,
+				price=682,
+				shop_link='https://wap.koudaitong.com/v2/goods/2frleanqm1fpf',
+				pic = Picture(title="Corrine Shirt - 衬衫(黑色)", image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/corrine_shirt_black/cover.jpg'),
+				details=[
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/corrine_shirt_black/details/0.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/corrine_shirt_black/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/corrine_shirt_black/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/corrine_shirt_black/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/corrine_shirt_black/details/4.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/corrine_shirt_black/details/5.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/corrine_shirt_black/details/6.jpg'),
+						]
+				)
+
+
+corrine_shirt_white = Garment(
+				gid=5,
+				cid=CID_1,
+				did=DID,
+				price=682,
+				shop_link='https://wap.koudaitong.com/v2/goods/2xbg9oeh5ieoj',
+				pic = Picture(title="Corrine Shirt - 衬衫(白色)", image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/corrine_shirt_white/cover.jpg'),
+				details=[
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/corrine_shirt_white/details/0.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/corrine_shirt_white/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/corrine_shirt_white/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/corrine_shirt_white/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/corrine_shirt_white/details/4.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/corrine_shirt_white/details/5.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/corrine_shirt_white/details/6.jpg'),
+						]
+				)
+
+
+diana_top_blue = Garment(
+				gid=6,
+				cid=CID_1,
+				did=DID,
+				price=813,
+				shop_link='https://wap.koudaitong.com/v2/goods/1y2r95tvpc0o3',
+				pic = Picture(title="Diana Top - 蕾丝上衣(蓝色)", image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/diana_top_blue/cover.jpg'),
+				details=[
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/diana_top_blue/details/0.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/diana_top_blue/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/diana_top_blue/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/diana_top_blue/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/diana_top_blue/details/4.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/diana_top_blue/details/5.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/diana_top_blue/details/6.jpg'),
+						]
+				)
+
+
+fiona_dress = Garment(
+				gid=7,
+				cid=CID_1,
+				did=DID,
+				price=910,
+				shop_link='https://wap.koudaitong.com/v2/goods/364245n7v25lv',
+				pic = Picture(title="Fiona Dress - 连衣裙", image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_dress/cover.jpg'),
+				details=[
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_dress/details/0.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_dress/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_dress/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_dress/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_dress/details/4.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_dress/details/5.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_dress/details/6.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_dress/details/7.jpg'),
+						]
+				)
+
+
+kelly_dress = Garment(
+				gid=8,
+				cid=CID_1,
+				did=DID,
+				price=850,
+				shop_link='https://wap.koudaitong.com/v2/goods/2frkcz73cc6f7',
+				pic = Picture(title="Kelly Dress - 连衣裙", image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/kelly_dress/cover.jpg'),
+				details=[
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/kelly_dress/details/0.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/kelly_dress/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/kelly_dress/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/kelly_dress/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/kelly_dress/details/4.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/kelly_dress/details/5.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/kelly_dress/details/6.jpg'),
+						]
+				)
+
+
+cappa_black = Garment(
+				gid=9,
+				cid=CID_1,
+				did=DID,
+				price=680,
+				shop_link='https://wap.koudaitong.com/v2/goods/3f0bz097p3uqr',
+				pic = Picture(title="Cappa Black - 披肩", image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/cappa_black/cover.jpg'),
+				details=[
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/cappa_black/details/0.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/cappa_black/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/cappa_black/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/cappa_black/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/cappa_black/details/4.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/cappa_black/details/5.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/cappa_black/details/6.jpg'),
+						]
+				)
+
+
+cappa_blue = Garment(
+				gid=10,
+				cid=CID_1,
+				did=DID,
+				price=680,
+				shop_link='https://wap.koudaitong.com/v2/goods/361l9h4hu41pv',
+				pic = Picture(title="Cappa Blue - 披肩", image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/cappa_blue/cover.jpg'),
+				details=[
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/cappa_blue/details/0.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/cappa_blue/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/cappa_blue/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/cappa_blue/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/cappa_blue/details/4.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/cappa_blue/details/5.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/cappa_blue/details/6.jpg'),
+						]
+				)
+
+
+fiona_pants_blue = Garment(
+				gid=11,
+				cid=CID_1,
+				did=DID,
+				price=735,
+				shop_link='https://wap.koudaitong.com/v2/goods/1y7ogg4xp6mcz',
+				pic = Picture(title="Fiona Pants Blue - 阔腿裤", image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants_blue/cover.jpg'),
+				details=[
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants_blue/details/0.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants_blue/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants_blue/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants_blue/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/fiona_pants_blue/details/4.jpg'),
+						]
+				)
+
+
+hellen_dress = Garment(
+				gid=12,
+				cid=CID_1,
+				did=DID,
+				price=990,
+				shop_link='https://wap.koudaitong.com/v2/goods/3ewlwiecsmotv',
+				pic = Picture(title="Hellen Dress - 连衣裙", image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/hellen_dress/cover.jpg'),
+				details=[
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/hellen_dress/details/0.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/hellen_dress/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/hellen_dress/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/hellen_dress/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/hellen_dress/details/4.jpg'),
+						]
+				)
+
+
+hellen_sundress = Garment(
+				gid=13,
+				cid=CID_1,
+				did=DID,
+				price=860,
+				shop_link='https://wap.koudaitong.com/v2/goods/3f1ikzrec8rz7',
+				pic = Picture(title="Hellen Sundress - 太阳裙", image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/hellen_sundress/cover.jpg'),
+				details=[
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/hellen_sundress/details/0.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/hellen_sundress/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/hellen_sundress/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/hellen_sundress/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/sophia/collections/sophiacollections/garments/hellen_sundress/details/4.jpg'),
+						]
+				)
+
+
 garments = [
 	fiona_pants,
 	diana_top,
+	anne_skirt,
+	corrine_shirt_black,
+	corrine_shirt_white,
+	diana_top_blue,
+	fiona_dress,
+	kelly_dress,
+	cappa_black,
+	cappa_blue,
+	fiona_pants_blue,
+	hellen_dress,
+	hellen_sundress,
 ]
 
 [gc.set(g) for g in garments]

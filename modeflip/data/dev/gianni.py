@@ -148,7 +148,7 @@ CID_1 = 1
 littleblackdress_colltion = Collection(
 		cid=CID_1,
 		did=DID,
-		title='Little Black Dress 系列',
+		title='Little Black Dress',
 		desc='“Every woman should own a simple elegant black dress”。Gianni独家设计命名的优雅小黑裙仅在MODE FLIP平价发售，再现Maxmara经典小黑裙',
 		released=datetime(2016, 7, 24),
 		signatrue_pics=[
@@ -245,12 +245,38 @@ antonina_dress = Garment(
 				)
 
 
+anastasia_dress = Garment(
+				gid=4,
+				cid=CID_1,
+				did=DID,
+				price=950,
+				shop_link='https://wap.koudaitong.com/v2/goods/2fxp7jjk9nes3',
+				pic = Picture(title="Anastasia Dress - 小黑裙", image='images/resources/gianni/collections/littleblackdress/garments/anastasia_dress/cover.jpg'),
+				details=[
+					# Picture(image='images/resources/gianni/collections/littleblackdress/garments/anastasia_dress/details/0.jpg'),
+					Picture(image='images/resources/gianni/collections/littleblackdress/garments/anastasia_dress/details/1.jpg'),
+					Picture(image='images/resources/gianni/collections/littleblackdress/garments/anastasia_dress/details/2.jpg'),
+					Picture(image='images/resources/gianni/collections/littleblackdress/garments/anastasia_dress/details/3.jpg'),
+					Picture(image='images/resources/gianni/collections/littleblackdress/garments/anastasia_dress/details/4.jpg'),
+					Picture(image='images/resources/gianni/collections/littleblackdress/garments/anastasia_dress/details/5.jpg'),
+					Picture(image='images/resources/gianni/collections/littleblackdress/garments/anastasia_dress/details/6.jpg'),
+					Picture(image='images/resources/gianni/collections/littleblackdress/garments/anastasia_dress/details/7.jpg'),
+					Picture(image='images/resources/gianni/collections/littleblackdress/garments/anastasia_dress/details/8.jpg'),
+					Picture(image='images/resources/gianni/collections/littleblackdress/garments/anastasia_dress/details/9.jpg'),
+					Picture(image='images/resources/gianni/collections/littleblackdress/garments/anastasia_dress/details/10.jpg'),
+					Picture(image='images/resources/gianni/collections/littleblackdress/garments/anastasia_dress/details/11.jpg'),
+					Picture(image='images/resources/gianni/collections/littleblackdress/garments/anastasia_dress/details/12.jpg'),
+						]
+				)
+
+
 
 
 garments = [
 	aglaya_dress,
 	albina_dress,
 	antonina_dress,
+	anastasia_dress,
 ]
 
 [gc.set(g) for g in garments]

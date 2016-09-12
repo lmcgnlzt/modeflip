@@ -146,7 +146,7 @@ CID_1 = 1
 edie_collections = Collection(
 		cid=CID_1,
 		did=DID,
-		title='Love for Edie 系列',
+		title='Love for Edie',
 		desc='Eileen为MODE FLIP独家推出的"Love for Edie"品牌限量系列，重塑美国60年代当红影星Edie Sedgwick迷人的复古气质，时髦性感又点天真',
 		released=datetime(2016, 7, 24),
 		signatrue_pics=[
@@ -174,7 +174,7 @@ CID_2 = 2
 squibees_collections = Collection(
 		cid=CID_2,
 		did=DID,
-		title='SquibeeS 系列',
+		title='SquibeeS',
 		desc='Elieen带来了来自Martha`s Vineyard(美国玛莎葡萄园岛）独特风情的SquibeeS品牌系列。在lambert Cove沙滩，享受全年充足的日照，白天帆船，冲浪；日落夜出，跟随街上的盛大的彩灯及欢乐的游行活动，躺在沙滩上看天空中燃放的烟花。SquibeeS，365天都是夏季一般阳光爽朗的好心情，顺便悄悄告诉你，好莱坞明星，艺术家，音乐家，政治家居住于此！',
 		released=datetime(2016, 7, 24),
 		signatrue_pics=[
@@ -293,6 +293,76 @@ pippa_skirt = Garment(
 						]
 				)
 
+aimee_dress = Garment(
+				gid=5,
+				cid=CID_2,
+				did=DID,
+				price=682,
+				shop_link='https://wap.koudaitong.com/v2/goods/2g07gmfmyfrn7',
+				pic = Picture(title="Aimee Dress - 衬衫", image='images/resources/eileen/collections/squibees/garments/aimee_dress/cover.jpg'),
+				details=[
+					Picture(image='images/resources/eileen/collections/squibees/garments/aimee_dress/details/0.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/aimee_dress/details/1.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/aimee_dress/details/2.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/aimee_dress/details/3.jpg'),
+						]
+				)
+
+
+chappy_blouse = Garment(
+				gid=6,
+				cid=CID_2,
+				did=DID,
+				price=710,
+				shop_link='https://wap.koudaitong.com/v2/goods/3emq9y1umi48j',
+				pic = Picture(title="Chappy Blouse - 衬衫", image='images/resources/eileen/collections/squibees/garments/chappy_blouse/cover.jpg'),
+				details=[
+					Picture(image='images/resources/eileen/collections/squibees/garments/chappy_blouse/details/0.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/chappy_blouse/details/1.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/chappy_blouse/details/2.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/chappy_blouse/details/3.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/chappy_blouse/details/4.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/chappy_blouse/details/5.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/chappy_blouse/details/6.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/chappy_blouse/details/7.jpg'),
+						]
+				)
+
+
+lili_dress = Garment(
+				gid=7,
+				cid=CID_2,
+				did=DID,
+				price=860,
+				shop_link='https://wap.koudaitong.com/v2/goods/3nnyda1pe124j',
+				pic = Picture(title="Lili Dress - 连衣裙", image='images/resources/eileen/collections/squibees/garments/lili_dress/cover.jpg'),
+				details=[
+					Picture(image='images/resources/eileen/collections/squibees/garments/lili_dress/details/0.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/lili_dress/details/1.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/lili_dress/details/2.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/lili_dress/details/3.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/lili_dress/details/4.jpg'),
+						]
+				)
+
+
+lucy_dress = Garment(
+				gid=8,
+				cid=CID_2,
+				did=DID,
+				price=880,
+				shop_link='https://wap.koudaitong.com/v2/goods/26vbjwp29d08z',
+				pic = Picture(title="Lucy Dress - 连衣裙", image='images/resources/eileen/collections/squibees/garments/lucy_dress/cover.jpg'),
+				details=[
+					Picture(image='images/resources/eileen/collections/squibees/garments/lucy_dress/details/0.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/lucy_dress/details/1.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/lucy_dress/details/2.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/lucy_dress/details/3.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/lucy_dress/details/4.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/lucy_dress/details/5.jpg'),
+					Picture(image='images/resources/eileen/collections/squibees/garments/lucy_dress/details/6.jpg'),
+						]
+				)
 
 
 
@@ -301,6 +371,10 @@ garments = [
 	sophia_dress,
 	anna_dress,
 	pippa_skirt,
+	aimee_dress,
+	chappy_blouse,
+	lili_dress,
+	lucy_dress,
 ]
 
 [gc.set(g) for g in garments]
