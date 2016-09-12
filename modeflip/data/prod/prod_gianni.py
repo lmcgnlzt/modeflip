@@ -271,11 +271,29 @@ anastasia_dress = Garment(
 				)
 
 
+arina_dress = Garment(
+				gid=5,
+				cid=CID_1,
+				did=DID,
+				price=870,
+				shop_link='https://wap.koudaitong.com/v2/goods/2x43xic8dmuxf',
+				pic = Picture(title="Arina Dress - 连衣裙", image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/arina_dress/cover.jpg'),
+				details=[
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/arina_dress/details/0.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/arina_dress/details/1.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/arina_dress/details/2.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/arina_dress/details/3.jpg'),
+					Picture(image='http://assets.modeflip.com/gianni/collections/littleblackdress/garments/arina_dress/details/4.jpg'),
+						]
+				)
+
 
 garments = [
 	aglaya_dress,
 	albina_dress,
 	antonina_dress,
+	anastasia_dress,
+	arina_dress,
 ]
 
 [gc.set(g) for g in garments]
