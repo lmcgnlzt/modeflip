@@ -33,7 +33,7 @@ class GarmentConfig(object):
 		return [c['gid'] for c in self.collection.find({'did': did, 'cid': cid}, {'_id':0, 'gid':1}).sort('gid', 1)]
 
 	def get_all_garments_by_designer_collection(self, did, cid):
-		return [Garment(**doc) for doc in self.collection.find({'did': did, 'cid': cid}, {'_id': 0})]
+		return [Garment(**doc) for doc in self.collection.find({'did': did, 'cid': cid}, {'_id': 0}).sort('gid', -1)]
 
 	def set(self, garment):
 		garment.validate()
