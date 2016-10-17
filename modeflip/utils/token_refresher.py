@@ -17,14 +17,14 @@ def update_access_token():
 	url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=%s&secret=%s'%(APPID, APPSECRET)
 	res = requests.get(url)
 	data = json.loads(res.text)
-	print data['access_token']
+	logging.warning('[%s] Token updated: [%s]', datetime.utcnow(), data['access_token'])
 
 
-def update_token_test():
-	logging.warning('[%s] access token updated', datetime.utcnow())
+# def update_token_test():
+# 	logging.warning('[%s] access token updated', datetime.utcnow())
 
 
-schedule.every(5).seconds.do(update_token_test)
+schedule.every(7100).seconds.do(update_access_token)
 while True:
 	schedule.run_pending()
 	time.sleep(1)
