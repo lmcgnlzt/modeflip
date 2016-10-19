@@ -1,3 +1,4 @@
+# MONGO settings
 MONGO: &LOCAL_27017 '127.0.0.1:27117'
 
 DB_ALIAS_MAP:
@@ -10,3 +11,14 @@ DB_CONFIG:
     db_host: *local_mongo
     db_name: 'mf_config'
     db_alias: 'local'
+
+# Redis settings
+REDIS_STANDALONE: &REDIS_STANDALONE
+    db_type: 'standalone'
+    host: 'localhost'
+    port: 6379
+    db: 15
+
+REDIS:
+    mf_cache:
+        *REDIS_STANDALONE
