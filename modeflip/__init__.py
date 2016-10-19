@@ -1,16 +1,21 @@
 from pyramid.config import Configurator
 from modeflip.utils.config import get_configuration
 from modeflip.utils.mongo import MongoManager
+from modeflip.utils.redisdb import RedisManager
 from modeflip.utils import pyramid_helpers
 from pyramid.events import NewRequest
 
 
 def setup_storage(config):
-	global get_database
-	config.registry['configuration'] = get_configuration()
-	local_config = config.registry['configuration']
-	get_database = MongoManager(local_config, force_load=True)
-	config.registry['get_database'] = get_database
+    global get_database
+    config.registry['configuration'] = get_configuration()
+    local_config = config.registry['configuration']
+
+    get_database = MongoManager(local_config, force_load=True)
+    get_cache = RedisManager(local_config, force_load=True)
+
+    config.registry['get_database'] = get_database
+    config.registry['get_cache'] = get_cache
 
 
 def main(global_config, **settings):
