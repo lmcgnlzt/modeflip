@@ -6,7 +6,13 @@ import json
 from datetime import datetime
 import schedule
 import time
+from modeflip.utils.config import get_configuration
+from modeflip.utils.redisdb import RedisManager
 
+
+local_config = get_configuration()
+get_cache = RedisManager(local_config, force_load=True)
+cache = get_cache('mf_cache')
 
 
 APPID = 'wx007c42b9e3f7413d'
@@ -17,7 +23,13 @@ def update_access_token():
 	url = 'https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=%s&secret=%s'%(APPID, APPSECRET)
 	res = requests.get(url)
 	data = json.loads(res.text)
-	logging.warning('[%s] Token updated: [%s]', datetime.utcnow(), data['access_token'])
+	access_token = data['access_token']
+	expires_in = data['expires_in']
+	pipe = cache.pipeline()
+	pipe.set('access_token', access_token)
+	pipe.set('expires_in', expires_in)
+	pipe.execute()
+	logging.warning('[%s] Token updated: [%s], expires_in: [%s]', datetime.utcnow(), access_token, expires_in)
 
 
 # def update_token_test():
