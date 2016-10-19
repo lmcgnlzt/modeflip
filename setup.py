@@ -14,6 +14,7 @@ requires = [
     'PyYAML==3.10',
     'beautifulsoup4==4.3.2',
     'schedule',
+    'redis==2.10.5',
     ]
 
 setup(name='modeflip',
