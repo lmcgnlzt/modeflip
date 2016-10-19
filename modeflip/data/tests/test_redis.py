@@ -4,13 +4,6 @@ from modeflip.utils.config import get_configuration
 from modeflip.utils.mongo import MongoManager
 from modeflip.utils.redisdb import RedisManager
 
-from modeflip.models.designer import *
-from modeflip.models.collection import *
-from modeflip.models.garment import *
-from modeflip.models.transaction import *
-from modeflip.models.merchant import *
-from pprint import pprint
-
 
 local_config = get_configuration()
 get_cache = RedisManager(local_config, force_load=True)
