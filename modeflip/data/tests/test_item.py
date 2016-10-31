@@ -1,3 +1,5 @@
+#coding=utf-8
+
 from datetime import datetime, timedelta
 
 from modeflip.utils.config import get_configuration
@@ -24,14 +26,5 @@ mc = MerchantConfig(config_db)
 ic = ItemConfig(config_db)
 
 
-for i in range(10):
-	item = Item(
-			tag='17BHC20100%s'%i,
-			price=813+i,
-			did=1,
-			cid=1,
-		)
-
-	ic.set(item)
-
 print ic.get_all_tags()
+

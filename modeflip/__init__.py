@@ -16,6 +16,9 @@ def setup_storage(config):
 
     config.registry['get_database'] = get_database
     config.registry['get_cache'] = get_cache
+    config.registry['wechat_qrcode_endpoint'] = local_config.WECHAT_QRCODE_ENDPOINT
+    config.registry['qrcode_image_url'] = local_config.QRCODE_IMAGE_URL
+    config.registry['message_to_client_endpoint'] = local_config.MESSAGE_TO_CLIENT_ENDPOINT
 
 
 def main(global_config, **settings):
@@ -32,6 +35,7 @@ def main(global_config, **settings):
 
     config.include('modeflip.api_internal.designer_api')
     config.include('modeflip.api_internal.mode_api')
+    config.include('modeflip.api_internal.membership_api')
 
 
     def add_cors_headers_response_callback(event):

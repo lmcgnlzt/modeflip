@@ -13,17 +13,12 @@ get_database = MongoManager(local_config, force_load=True)
 config_db = get_database('mf_config')
 
 ic = ItemConfig(config_db)
-url = 'http://0.0.0.0:6543/membership_api/merchant/generate'
+url = 'http://0.0.0.0:6543/membership_api/member/scan'
 
-
-item = ic.get_by_tag('172210402')
-item.price = 800
-merchant_name = 'tianjin'
-items = [item.__json__()]
 
 json_body = {
-	'merchant_name': merchant_name,
-	'items': items,
+	'scene_key': 1571902741,
+	'scanner_open_id': 'olBwZt_NW0IBseUIa5fImCCj_dn4',
 }
 
 
