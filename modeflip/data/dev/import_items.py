@@ -37,7 +37,7 @@ for index, row in data.iterrows():
 	item = Item(
 		tag=str(int(row[0])),
 		name=row[1].encode('utf-8'),
-		original_price=float(row[2]),
+		original_price=float(int(row[2])),
 		available_sizes=[index_size_mapping[i] for i in range(3, 10) if row[i] is not None],
 		)
 	ic.set(item)

@@ -17,7 +17,7 @@ url = 'http://0.0.0.0:6543/membership_api/member/scan'
 
 
 json_body = {
-	'scene_id': 'TRANSACTION-3',
+	'scene_key': 1571902741,
 	'scanner_open_id': 'olBwZt_NW0IBseUIa5fImCCj_dn4',
 }
 

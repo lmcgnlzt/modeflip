@@ -1,5 +1,6 @@
-from random import choice
+from random import choice, randint
 import string
+import time
 
 def relative_percentage(x, y):
 	if x == 0 and y == 0:
@@ -91,6 +92,9 @@ def get_ctr(clicks, views):
 
 def generate_random_key(length=8, chars=string.letters + string.digits):
 	return ''.join([choice(chars) for i in range(length)]).lower()
+
+def generate_random_scene_id():
+	return int(round(time.time())) + randint(9, 99999999) # generate random integer smaller than 2 pow 32
 
 def roll_window_sum(river, window):
 	returnlist = []

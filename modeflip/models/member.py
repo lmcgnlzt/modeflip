@@ -15,7 +15,7 @@ class Member(Object):
 
 	@property
 	def total_points(self):
-		return sum([sum([i.points for i in history.items]) for history in self.shopping_history]) # calc total points on the fly
+		return int(sum([sum([i.points for i in history.items]) for history in self.shopping_history])) # calc total points on the fly
 
 	def __json__(self):
 		json_self = Object.__json__(self)

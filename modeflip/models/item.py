@@ -50,7 +50,7 @@ class ItemConfig(object):
 		return Item(**doc) if doc else None
 
 	def get_all_tags(self):
-		return [str(c['tag']) for c in self.collection.find({}, {'_id':0, 'tag':1})]
+		return [{'tag':c['tag'], 'name':c['name'].encode('utf-8')} for c in self.collection.find({}, {'_id':0, 'tag':1, 'name':1})]
 
 	def set(self, item):
 		item.validate()

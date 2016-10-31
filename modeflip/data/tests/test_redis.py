@@ -6,5 +6,14 @@ local_config = get_configuration()
 get_cache = RedisManager(local_config, force_load=True)
 cache = get_cache('mf_cache')
 print cache
-print 'access_token: [%s]'%cache.get('access_token')
-print 'token_expiration: [%s]'%cache.get('expires_in')
+# print 'access_token: [%s]'%cache.get('access_token')
+# print 'token_expiration: [%s]'%cache.get('token_expiration')
+
+
+pipeline = cache.pipeline()
+pipeline.set('testkey', 'testvalue')
+pipeline.expire('testkey', 10)
+pipeline.execute()
+
+print 'Done'
+

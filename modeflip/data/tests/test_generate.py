@@ -17,7 +17,7 @@ url = 'http://0.0.0.0:6543/membership_api/merchant/generate'
 
 
 item = ic.get_by_tag('172210402')
-item.price = 1234
+item.price = 800
 merchant_name = 'tianjin'
 items = [item.__json__()]
 

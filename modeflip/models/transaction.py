@@ -12,7 +12,7 @@ class Transaction(Object):
 	tid = Integer(nullable=False)
 	merchant_name = String(mutator=lambda x: x.strip(), nullable=False) # user_name of Merchant
 	open_id = String(mutator=lambda x: x.strip()) # open_id of member
-	gift = String(mutator=lambda x: x.strip())
+	gift = String(default=None, mutator=lambda x: x.strip())
 	trans_date = DateTime(datetime.utcnow())
 	items = List(value=EmbeddedObject(Item))
 
