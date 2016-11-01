@@ -9,7 +9,7 @@ from modeflip.models.member import Member, MemberConfig
 from modeflip.models.item import Item, ItemConfig
 from modeflip.models.transaction import Transaction, TransactionConfig
 from modeflip.models.scene import Scene, SceneConfig
-from modeflip.utils.date_utils import unix_timestamp_int_in_seconds, local_date
+from modeflip.utils.date_utils import local_date
 from modeflip.utils.math_utils import generate_random_scene_id
 
 import logging
@@ -19,7 +19,8 @@ LOGGER = logging.getLogger(__name__)
 class MembershipAPI(object):
 
 	MERCHANT_OPENID = 'merchants:{open_id}'
-	TTL = int(timedelta(days=3).total_seconds()) # TTL for both Redis scene_key and wechat QR code
+	SCENE_TTL = int(timedelta(days=3).total_seconds()) # SCENE_TTL for both Redis scene_key and wechat QR code
+	MERCHANT_LOGIN_SESSION_TTL = int(timedelta(hours=8).total_seconds()) # MERCHANT_LOGIN_SESSION_TTL
 
 	def __init__(self, context, request):
 		self.request = request
@@ -40,9 +41,15 @@ class MembershipAPI(object):
 				return False
 			else:
 				open_id = data['open_id']
+				merchant_name = data['user_name']
 				now = datetime.utcnow()
 				key = self.MERCHANT_OPENID.format(open_id=open_id)
-				self.cache.set(key, unix_timestamp_int_in_seconds(now))
+
+				pipeline = self.cache.pipeline()
+				pipeline.set(key, merchant_name)
+				pipeline.expire(key, self.MERCHANT_LOGIN_SESSION_TTL)
+				pipeline.execute()
+
 				LOGGER.warning('[Login recorded] open_id [%s] logged in at [%s]', open_id, now)
 				return True
 
@@ -60,9 +67,8 @@ class MembershipAPI(object):
 
 		# open_id = 'olBwZt_NW0IBseUIa5fImCCj_dn4'
 
-		# key = 'merchants:{}'.format(open_id)
 		key = self.MERCHANT_OPENID.format(open_id=open_id)
-		return self.cache.exists(key) and (unix_timestamp_int_in_seconds(datetime.utcnow()) - int(self.cache.get(key))) > 30 # 8 Hours
+		return self.cache.get(key)
 
 	# GET /membership_api/merchant/items/{tag}
 	def merchant_item(self):
@@ -75,7 +81,7 @@ class MembershipAPI(object):
 		'''
 		generate:
 			random scene_key: int(round(time.time())) + random.randint(9, 99999999),
-			update redis, scene_key : {trans_scan : True, sid : 2}, set TTL 3 days
+			update redis, scene_key : {trans_scan : True, sid : 2}, set SCENE_TTL 3 days
 		scan:
 			look up key in redis, see if trans_scan True, get scene by sid
 		'''
@@ -108,7 +114,7 @@ class MembershipAPI(object):
 
 			# post to get QR code
 			ticket_url = self.request.registry['wechat_qrcode_endpoint'].format(access_token=self.cache.get('access_token'))
-			body = {"expire_seconds": self.TTL, "action_name": "QR_SCENE", "action_info": {"scene": {"scene_id": scene_key}}}
+			body = {"expire_seconds": self.SCENE_TTL, "action_name": "QR_SCENE", "action_info": {"scene": {"scene_id": scene_key}}}
 			res = requests.post(ticket_url, data=json.dumps(body))
 			qr_ticket = res.json()['ticket']
 			qr_image_url = self.request.registry['qrcode_image_url'].format(ticket=qr_ticket)
@@ -198,7 +204,7 @@ class MembershipAPI(object):
 		scene_key = generate_random_scene_id()
 		pipeline = self.cache.pipeline()
 		pipeline.set(scene_key, json.dumps({'trans_scan' : True, 'sid' : scene.sid}))
-		pipeline.expire(scene_key, self.TTL)
+		pipeline.expire(scene_key, self.SCENE_TTL)
 		pipeline.execute()
 		return scene_key, scene
 
