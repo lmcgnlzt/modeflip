@@ -13,7 +13,7 @@ from modeflip.utils.mongo import MongoManager
 from modeflip.models.item import *
 
 
-local_config = get_configuration()
+local_config = get_configuration('production')
 get_database = MongoManager(local_config, force_load=True)
 config_db = get_database('mf_config')
 ic = ItemConfig(config_db)
