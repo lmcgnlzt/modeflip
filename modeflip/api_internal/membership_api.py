@@ -181,7 +181,7 @@ class MembershipAPI(object):
 					    "msgtype": "text",
 					    "text":
 						    {
-						         "content": u"恭喜您获得线下消费积分奖励，目前您的总消费积分为 {}。(积分使用及相关活动请咨询MODEFLIP线下实体店)".format(mb.total_points)
+						         "content": u"恭喜您获得线下消费积分奖励 {}，目前您的总消费积分为 {}。(积分使用及相关活动请咨询MODEFLIP线下实体店)".format(transaction.trans_points, mb.total_points)
 						    }
 						}
 					status_code = self._notify_user(body)
