@@ -16,6 +16,14 @@ class Transaction(Object):
 	trans_date = DateTime(datetime.utcnow())
 	items = List(value=EmbeddedObject(Item))
 
+	@property
+	def trans_points(self):
+		return int(sum([i.points for i in self.items]))
+
+	def __json__(self):
+		json_self = Object.__json__(self)
+		json_self['trans_points'] = self.trans_points
+		return json_self
 
 
 class TransactionConfig(object):
