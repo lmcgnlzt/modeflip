@@ -18,7 +18,7 @@ requires = [
     'redis==2.10.5',
     'hiredis==0.2.0',
     'pandas==0.18.1',
-    'bcrypt==3.1.0',
+    'py-bcrypt==0.4',
     ]
 
 setup(name='modeflip',
