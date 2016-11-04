@@ -22,22 +22,22 @@ tc = TransactionConfig(config_db)
 mc = MerchantConfig(config_db)
 
 
-m = Merchant(
-		user_name='tianjin',
-		wechat_id='ZapDude',
-		address='The Cloud',
-		phone='010101010101'
-	)
+# m = Merchant(
+# 		user_name='tianjin',
+# 		wechat_id='ZapDude',
+# 		address='The Cloud',
+# 		phone='010101010101'
+# 	)
 
 
-mc.set(m)
+# mc.set(m)
 
 mm = mc.get_by_user_name('tianjin')
-mm.set_password('demo123')
+mm.set_password('2016@dayuecheng')
 mc.set(mm)
 
 pprint(mm.__json__())
 
-print mm.check_salted_password('demo123')
+print mm.check_salted_password('2016@dayuecheng')
 
-print mc.get_by_password('ZapDude', 'demo123')
+print mc.get_by_password('tianjin', '2016@dayuecheng')
